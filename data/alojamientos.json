@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Finca El Mirador del Embalse",
+    "destino_slug": "guatape",
+    "municipio": "Guatapé",
+    "vereda": "La Piedra",
+    "precio": 180000,
+    "whatsapp": "573001234567",
+    "descripcion": "Cabaña con vista al embalse, desayuno campesino incluido.",
+    "foto": "https://images.pexels.com/photos/27435937/pexels-photo-27435937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "demo": true,
+    "foto_credit": "Photo by Reia Brown on Pexels"
+  },
+  {
+    "nombre": "Casa Silletera La Flores",
+    "destino_slug": "santa-elena",
+    "municipio": "Medellín",
+    "vereda": "Santa Elena",
+    "precio": 140000,
+    "whatsapp": "573012345678",
+    "descripcion": "Habitación en casa familiar entre cultivos de flores.",
+    "foto": "https://images.pexels.com/photos/32170914/pexels-photo-32170914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "demo": true,
+    "foto_credit": "Photo by Ravikant on Pexels"
+  },
+  {
+    "nombre": "Hostal Balcón Cafetero",
+    "destino_slug": "jardin",
+    "municipio": "Jardín",
+    "vereda": "Cristianía",
+    "precio": 120000,
+    "whatsapp": "573023456789",
+    "descripcion": "Hostal colonial a dos cuadras de la plaza principal.",
+    "foto": "https://images.pexels.com/photos/36000033/pexels-photo-36000033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "demo": true,
+    "foto_credit": "Photo by Cabetus on Pexels"
+  },
+  {
+    "nombre": "Posada El Salvador",
+    "destino_slug": "jerico",
+    "municipio": "Jericó",
+    "vereda": "El Castillo",
+    "precio": 110000,
+    "whatsapp": "573034567890",
+    "descripcion": "Posada tranquila con mirador al cañón del Cauca.",
+    "foto": "https://images.pexels.com/photos/32419585/pexels-photo-32419585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "demo": true,
+    "foto_credit": "Photo by Tiarrasorte on Pexels"
+  }
+]

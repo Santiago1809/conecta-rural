@@ -1,0 +1,92 @@
+[
+  {
+    "nombre": "Finca El Mirador del Embalse",
+    "municipio": "Guatapé",
+    "vereda": "La Piedra",
+    "destino_slug": "guatape",
+    "tipo": "Alojamiento rural",
+    "whatsapp": "573001234567",
+    "telefono": "+57 4 861 0555",
+    "precio": 180000,
+    "codigo_rnt": "12345",
+    "fotos": [
+      "https://images.pexels.com/photos/27435937/pexels-photo-27435937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "demo": true,
+    "fotos_credit": [
+      "Photo by Reia Brown on Pexels"
+    ]
+  },
+  {
+    "nombre": "Silleteros de Santa Elena",
+    "municipio": "Medellín",
+    "vereda": "Santa Elena",
+    "destino_slug": "santa-elena",
+    "tipo": "Guianza local",
+    "whatsapp": "573012345678",
+    "telefono": "+57 4 538 0001",
+    "precio": 60000,
+    "codigo_rnt": "23456",
+    "fotos": [
+      "https://images.pexels.com/photos/33436721/pexels-photo-33436721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "demo": true,
+    "fotos_credit": [
+      "Photo by Daniel Velez on Pexels"
+    ]
+  },
+  {
+    "nombre": "Café Origen Jardín",
+    "municipio": "Jardín",
+    "vereda": "Cristianía",
+    "destino_slug": "jardin",
+    "tipo": "Finca cafetera",
+    "whatsapp": "573023456789",
+    "telefono": "+57 4 845 6112",
+    "precio": 95000,
+    "codigo_rnt": "34567",
+    "fotos": [
+      "https://images.pexels.com/photos/35629751/pexels-photo-35629751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "demo": true,
+    "fotos_credit": [
+      "Photo by Christian Bolanos on Pexels"
+    ]
+  },
+  {
+    "nombre": "Guarnielería Jericó Tradición",
+    "municipio": "Jericó",
+    "vereda": "El Castillo",
+    "destino_slug": "jerico",
+    "tipo": "Artesanías",
+    "whatsapp": "573034567890",
+    "telefono": "+57 4 852 3030",
+    "precio": 120000,
+    "codigo_rnt": "45678",
+    "fotos": [
+      "https://images.pexels.com/photos/37170281/pexels-photo-37170281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "demo": true,
+    "fotos_credit": [
+      "Photo by Miguel Angel Rojas Higuita on Pexels"
+    ]
+  },
+  {
+    "nombre": "Aventura Río San Rafael",
+    "municipio": "San Rafael",
+    "vereda": "El Charco",
+    "destino_slug": "san-rafael",
+    "tipo": "Operador de aventura",
+    "whatsapp": "573045678901",
+    "telefono": "+57 4 858 4220",
+    "precio": 75000,
+    "codigo_rnt": "56789",
+    "fotos": [
+      "https://images.pexels.com/photos/2250521/pexels-photo-2250521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "demo": true,
+    "fotos_credit": [
+      "Photo by Brett Sayles on Pexels"
+    ]
+  }
+]

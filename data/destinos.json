@@ -1,0 +1,236 @@
+[
+  {
+    "slug": "guatape",
+    "nombre": "Guatapé",
+    "municipio": "Guatapé",
+    "vereda": "La Piedra",
+    "lat": 6.0312,
+    "lon": -75.4261,
+    "tiempo_aprox": "2 h desde Medellín",
+    "consejo": "Sube a la Piedra temprano para evitar la niebla del mediodía y lleva impermeable: el clima cambia rápido.",
+    "hero": "https://images.pexels.com/photos/12470916/pexels-photo-12470916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "hero_credit": "Photo by Nick Wehrli on Pexels",
+    "transporte": [
+      "bus",
+      "chiva",
+      "carro_4x4",
+      "caballo_caminata"
+    ],
+    "tiempos_transporte": {
+      "bus": "2 h 30 min",
+      "chiva": "3 h",
+      "carro_4x4": "2 h",
+      "caballo_caminata": "3 h 30 min"
+    },
+    "precio_desde": 85000,
+    "verificado": true,
+    "descripcion": "Pueblo de zócalos coloridos a orillas del embalse. Ideal para miradores, paseos en lancha y café de origen.",
+    "itinerario": [
+      {
+        "hora": "07:00",
+        "titulo": "Salida desde Medellín",
+        "detalle": "Terminal del Norte, taquilla 12. Compra el tiquete de ida y vuelta."
+      },
+      {
+        "hora": "09:00",
+        "titulo": "Subida a la Piedra del Peñol",
+        "detalle": "740 escalones con mirador 360°. Lleva agua y bloqueador."
+      },
+      {
+        "hora": "12:30",
+        "titulo": "Almuerzo en el malecón",
+        "detalle": "Bandeja paisa o trucha del embalse en restaurantes locales."
+      },
+      {
+        "hora": "15:00",
+        "titulo": "Paseo en lancha",
+        "detalle": "Recorrido de 1 hora por el embalse con chaleco incluido."
+      }
+    ]
+  },
+  {
+    "slug": "santa-elena",
+    "nombre": "Santa Elena",
+    "municipio": "Medellín",
+    "vereda": "Santa Elena",
+    "lat": 6.21,
+    "lon": -75.49,
+    "tiempo_aprox": "1 h desde Medellín",
+    "consejo": "Las mañanas son frescas (12-16 °C): lleva chaqueta ligera y calzado cerrado para los senderos.",
+    "hero": "https://images.pexels.com/photos/33437856/pexels-photo-33437856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "hero_credit": "Photo by Daniel Velez on Pexels",
+    "transporte": [
+      "bus",
+      "chiva",
+      "caballo_caminata"
+    ],
+    "tiempos_transporte": {
+      "bus": "1 h 20 min",
+      "chiva": "1 h 45 min",
+      "caballo_caminata": "2 h 30 min"
+    },
+    "precio_desde": 60000,
+    "verificado": true,
+    "descripcion": "Corregimiento de flores y bosque de niebla. Cuna de los silleteros y del Parque Arví.",
+    "itinerario": [
+      {
+        "hora": "08:00",
+        "titulo": "Metrocable al Parque Arví",
+        "detalle": "Línea L desde Santo Domingo. Vista panorámica del valle."
+      },
+      {
+        "hora": "10:00",
+        "titulo": "Sendero de los silleteros",
+        "detalle": "Caminata guiada de 2 h entre fincas floricultoras."
+      },
+      {
+        "hora": "13:00",
+        "titulo": "Almuerzo campesino",
+        "detalle": "Sancocho de gallina en fonda veredal con productos locales."
+      }
+    ]
+  },
+  {
+    "slug": "jardin",
+    "nombre": "Jardín",
+    "municipio": "Jardín",
+    "vereda": "Cristianía",
+    "lat": 5.6,
+    "lon": -75.82,
+    "tiempo_aprox": "3 h 30 min desde Medellín",
+    "consejo": "Lleva binoculares: es zona de avistamiento del gallito de roca al amanecer.",
+    "hero": "https://images.pexels.com/photos/15020185/pexels-photo-15020185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "hero_credit": "Photo by Cesar Vasquez on Pexels",
+    "transporte": [
+      "bus",
+      "chiva",
+      "carro_4x4"
+    ],
+    "tiempos_transporte": {
+      "bus": "4 h",
+      "chiva": "4 h 30 min",
+      "carro_4x4": "3 h 30 min"
+    },
+    "precio_desde": 95000,
+    "verificado": true,
+    "descripcion": "Pueblo patrimonio con balcones coloniales, café de altura y la cueva del gallito de roca.",
+    "itinerario": [
+      {
+        "hora": "06:30",
+        "titulo": "Salida desde Medellín",
+        "detalle": "Terminal del Sur. El trayecto bordea el río Cauca."
+      },
+      {
+        "hora": "10:00",
+        "titulo": "Teleférico La Garrucha",
+        "detalle": "Vista del pueblo y cafetales. Tiquete ida y vuelta."
+      },
+      {
+        "hora": "12:00",
+        "titulo": "Tour cafetero",
+        "detalle": "Beneficio, tostión y cata en finca familiar."
+      },
+      {
+        "hora": "16:00",
+        "titulo": "Plaza principal",
+        "detalle": "Dulces típicos y café en la basílica Menor."
+      }
+    ]
+  },
+  {
+    "slug": "jerico",
+    "nombre": "Jericó",
+    "municipio": "Jericó",
+    "vereda": "El Castillo",
+    "lat": 5.79,
+    "lon": -75.78,
+    "tiempo_aprox": "3 h desde Medellín",
+    "consejo": "El atardecer desde el cerro El Salvador es el mejor plan: llega 30 minutos antes.",
+    "hero": "https://images.pexels.com/photos/35484219/pexels-photo-35484219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "hero_credit": "Photo by Enzo Renz on Pexels",
+    "transporte": [
+      "bus",
+      "chiva",
+      "carro_4x4",
+      "caballo_caminata"
+    ],
+    "tiempos_transporte": {
+      "bus": "3 h 30 min",
+      "chiva": "4 h",
+      "carro_4x4": "3 h",
+      "caballo_caminata": "4 h 30 min"
+    },
+    "precio_desde": 90000,
+    "verificado": true,
+    "descripcion": "Tierra de la Madre Laura. Museos, guarnielería y miradores sobre el suroeste antioqueño.",
+    "itinerario": [
+      {
+        "hora": "07:00",
+        "titulo": "Salida desde Medellín",
+        "detalle": "Terminal del Sur, servicio directo."
+      },
+      {
+        "hora": "10:30",
+        "titulo": "Museo de la Madre Laura",
+        "detalle": "Casa natal y memoria de la santa colombiana."
+      },
+      {
+        "hora": "13:00",
+        "titulo": "Almuerzo y guarnielería",
+        "detalle": "Taller de cuero tradicional con demostración en vivo."
+      },
+      {
+        "hora": "17:30",
+        "titulo": "Atardecer en El Salvador",
+        "detalle": "Mirador del cerro con vista al cañón del Cauca."
+      }
+    ]
+  },
+  {
+    "slug": "san-rafael",
+    "nombre": "San Rafael",
+    "municipio": "San Rafael",
+    "vereda": "El Charco",
+    "lat": 6.29,
+    "lon": -75.02,
+    "tiempo_aprox": "3 h desde Medellín",
+    "consejo": "Ríos y charcos de agua fría: empaca vestido de baño, toalla de microfibra y zapatos de río.",
+    "hero": "https://images.pexels.com/photos/32403583/pexels-photo-32403583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "hero_credit": "Photo by Paul Scharf on Pexels",
+    "transporte": [
+      "bus",
+      "carro_4x4",
+      "caballo_caminata"
+    ],
+    "tiempos_transporte": {
+      "bus": "4 h",
+      "carro_4x4": "3 h",
+      "caballo_caminata": "4 h 30 min"
+    },
+    "precio_desde": 75000,
+    "verificado": true,
+    "descripcion": "Capital de los charcos del Oriente. Tubing, senderismo y trapiches paneleros.",
+    "itinerario": [
+      {
+        "hora": "06:00",
+        "titulo": "Salida desde Medellín",
+        "detalle": "Terminal del Norte vía Guarne - San Rafael."
+      },
+      {
+        "hora": "09:30",
+        "titulo": "Tubing por el río",
+        "detalle": "Descenso guiado de 2 h con equipo de seguridad."
+      },
+      {
+        "hora": "13:00",
+        "titulo": "Almuerzo ribereño",
+        "detalle": "Sancocho trifásico y guarapo de caña."
+      },
+      {
+        "hora": "15:00",
+        "titulo": "Charco El Biscocho",
+        "detalle": "Tarde de baño en aguas cristalinas con salvavidas."
+      }
+    ]
+  }
+]

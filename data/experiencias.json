@@ -1,0 +1,56 @@
+[
+  {
+    "nombre": "Subida a la Piedra + lancha",
+    "destino_slug": "guatape",
+    "categoria": "Aventura",
+    "precio": 85000,
+    "descripcion": "Ascenso guiado a la Piedra del Peñol y paseo en lancha por el embalse.",
+    "foto": "https://images.pexels.com/photos/19771688/pexels-photo-19771688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foto_credit": "Photo by Giovanna De La Serna on Pexels"
+  },
+  {
+    "nombre": "Taller silletero",
+    "destino_slug": "santa-elena",
+    "categoria": "Cultura",
+    "precio": 60000,
+    "descripcion": "Arma tu propia silleta con una familia silletera y camina entre cultivos de flores.",
+    "foto": "https://images.pexels.com/photos/27087919/pexels-photo-27087919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foto_credit": "Photo by Luis Ariza on Pexels"
+  },
+  {
+    "nombre": "Tour cafetero de origen",
+    "destino_slug": "jardin",
+    "categoria": "Gastronomía",
+    "precio": 95000,
+    "descripcion": "Del cafetal a la taza: beneficio, tostión y cata con familia productora.",
+    "foto": "https://images.pexels.com/photos/35923206/pexels-photo-35923206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foto_credit": "Photo by Mateo Arbelaez on Pexels"
+  },
+  {
+    "nombre": "Tubing en el río",
+    "destino_slug": "san-rafael",
+    "categoria": "Aventura",
+    "precio": 75000,
+    "descripcion": "Descenso guiado en flotador por rápidos suaves, con equipo de seguridad.",
+    "foto": "https://images.pexels.com/photos/13737937/pexels-photo-13737937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foto_credit": "Photo by Daniel Ciubarov on Pexels"
+  },
+  {
+    "nombre": "Ruta Madre Laura",
+    "destino_slug": "jerico",
+    "categoria": "Cultura",
+    "precio": 55000,
+    "descripcion": "Recorrido patrimonial por la casa natal, museos y capillas de Jericó.",
+    "foto": "https://images.pexels.com/photos/35484145/pexels-photo-35484145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foto_credit": "Photo by Enzo Renz on Pexels"
+  },
+  {
+    "nombre": "Cocina de leña campesina",
+    "destino_slug": "santa-elena",
+    "categoria": "Gastronomía",
+    "precio": 70000,
+    "descripcion": "Prepara sancocho y arepas en fogón de leña con cocineras tradicionales.",
+    "foto": "https://images.pexels.com/photos/7140286/pexels-photo-7140286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "foto_credit": "Photo by Filirovska on Pexels"
+  }
+]
