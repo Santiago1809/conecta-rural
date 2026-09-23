@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="mt-16 border-t border-inputborder/60 bg-soft">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-2 px-4 py-8 text-sm text-ink/70 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <p className="font-headline font-semibold text-ink">
-          Conecta Rural · Turismo comunitario en Antioquia
+           Mi Ruta · Turismo comunitario en Antioquia
         </p>
         <p>
           Mapas ©{" "}

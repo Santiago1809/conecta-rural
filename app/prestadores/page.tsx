@@ -4,12 +4,12 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { PRESTADORES, formatCOP, getDestino } from "@/lib/data";
 import RntBadge from "./RntBadge";
 
-// Conecta: provider cards with direct wa.me chat + tel: fallback + RNT badge.
+// Mi Ruta: provider cards with direct wa.me chat + tel: fallback + RNT badge.
 export default function PrestadoresPage() {
   return (
     <div className="flex flex-col gap-8 py-8">
       <header className="flex flex-col gap-2">
-        <h1 className="font-headline text-3xl font-extrabold">Conecta con prestadores</h1>
+        <h1 className="font-headline text-3xl font-extrabold">Conéctate con prestadores</h1>
         <p className="text-ink/70">
           Habla directo por WhatsApp con guías, fincas y operadores verificados.
           Si no tienes datos, usa la llamada telefónica.

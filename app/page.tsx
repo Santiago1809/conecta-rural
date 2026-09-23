@@ -2,11 +2,13 @@ import Link from "next/link";
 import DestinationCard from "@/components/DestinationCard";
 import SearchBar from "@/components/SearchBar";
 import VerifiedBadge from "@/components/VerifiedBadge";
-import { DESTINOS } from "@/lib/data";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import { DESTINOS, PRESTADORES, formatCOP } from "@/lib/data";
 
 // Bienvenida: hero, search, featured cards, community insights.
 export default function Home() {
-  const destacados = DESTINOS.slice(0, 3);
+  const destacados = DESTINOS.slice(0, 5);
+  const prestadorDestacado = PRESTADORES[0];
   return (
     <div className="flex flex-col gap-12 py-8">
       {/* Hero */}
@@ -14,7 +16,7 @@ export default function Home() {
         <div className="flex max-w-2xl flex-col gap-4">
           <VerifiedBadge label="Turismo comunitario verificado" />
           <h1 className="font-headline text-3xl font-extrabold leading-tight sm:text-5xl">
-            Descubre lo mejor del campo antes de llegar
+            Tu próxima aventura está más cerca de lo que imaginas
           </h1>
           <p className="text-base text-white/80 sm:text-lg">
             Destinos rurales de Antioquia con rutas reales, clima en vivo y
@@ -40,6 +42,54 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Prestador destacado */}
+      {prestadorDestacado && (
+        <section className="flex flex-col gap-4">
+          <div className="flex items-end justify-between">
+            <h2 className="font-headline text-2xl font-bold">
+              Primer prestador destacado
+            </h2>
+            <Link href="/prestadores" className="text-sm font-semibold text-terracota underline">
+              Ver todos
+            </Link>
+          </div>
+          <article className="overflow-hidden rounded-2xl bg-card shadow-warm">
+            <div className="relative aspect-video w-full">
+              <img
+                src={prestadorDestacado.fotos[0]}
+                alt={prestadorDestacado.nombre}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="flex flex-col gap-2 p-5">
+              <div className="flex flex-wrap items-center gap-2">
+                <VerifiedBadge />
+                <p className="text-xs font-semibold uppercase tracking-wide text-terracota">
+                  {prestadorDestacado.tipo} · {prestadorDestacado.municipio} · {prestadorDestacado.vereda}
+                </p>
+              </div>
+              <h3 className="font-headline text-xl font-bold">{prestadorDestacado.nombre}</h3>
+              <p className="text-sm font-semibold text-bosque">
+                Desde {formatCOP(prestadorDestacado.precio)}
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                <WhatsAppButton
+                  phone={prestadorDestacado.whatsapp}
+                  message={`Hola ${prestadorDestacado.nombre}, quiero información sobre ${prestadorDestacado.tipo.toLowerCase()} en ${prestadorDestacado.municipio}.`}
+                  label="Chatear por WhatsApp"
+                />
+                <a
+                  href={`tel:${prestadorDestacado.telefono.replace(/\s/g, "")}`}
+                  className="inline-flex items-center justify-center rounded-[10px] border border-bosque bg-white px-4 py-2.5 text-sm font-semibold text-bosque transition hover:bg-verified"
+                >
+                  Llamar
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+      )}
 
       {/* Community insights */}
       <section className="grid grid-cols-1 gap-4 sm:grid-cols-2">

@@ -12,10 +12,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-inputborder/60 bg-canvas/95 backdrop-blur">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2" aria-label="Conecta Rural · inicio">
+        <Link href="/" className="flex items-center gap-2" aria-label="Mi Ruta · inicio">
           <Image
             src="/logo.svg"
-            alt="Conecta Rural · Antioquia auténtica"
+            alt="Mi Ruta · Antioquia auténtica"
             width={190}
             height={48}
             priority

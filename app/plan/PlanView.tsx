@@ -126,7 +126,7 @@ export default function PlanView() {
   }
 
   const shareMsg = [
-    "Mi plan Conecta Rural:",
+    "Mi plan Mi Ruta:",
     ...items.map((i) => {
       const d = getDestino(i.slug);
       return d

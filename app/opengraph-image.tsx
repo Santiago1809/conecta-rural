@@ -5,7 +5,7 @@ export const size = {
   height: 630,
 };
 
-export const alt = "Conecta Rural · Descubre lo mejor del campo antes de llegar";
+export const alt = "Mi Ruta · Tu próxima aventura está más cerca de lo que imaginas";
 
 export const contentType = "image/png";
 
@@ -60,7 +60,7 @@ export default function OpengraphImage() {
               marginTop: "32px",
             }}
           >
-            Descubre lo mejor del campo antes de llegar
+            Tu próxima aventura está más cerca de lo que imaginas
           </div>
           <div
             style={{
@@ -105,7 +105,7 @@ export default function OpengraphImage() {
                 marginLeft: "16px",
               }}
             >
-              Conecta Rural
+              Mi Ruta
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
 export const MEDELLIN_ORIGIN = { lat: 6.2442, lon: -75.5812, label: "Medellín" } as const;
 
 /** Nominatim requires a descriptive User-Agent. */
-export const NOMINATIM_USER_AGENT = "ConectaRural/0.1 (contacto@conectarural.co)";
+export const NOMINATIM_USER_AGENT = "MiRuta/0.1 (contacto@miruta.co)";
 
 /** Socrata dataset for RNT lookup on datos.gov.co (overridable via env). */
 export const RNT_DATASET_ID =

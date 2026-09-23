@@ -18,27 +18,27 @@ const body = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    "https://conecta-rural-antioquia-santiago1809s-projects.vercel.app",
+    "https://mi-ruta-antioquia.vercel.app",
   ),
   title: {
-    default: "Conecta Rural · Descubre lo mejor del campo",
-    template: "%s · Conecta Rural",
+    default: "Mi Ruta · Tu próxima aventura está más cerca",
+    template: "%s · Mi Ruta",
   },
   description:
-    "Turismo comunitario en Antioquia con prestadores verificados, rutas reales y WhatsApp directo para descubrir lo mejor del campo.",
+    "Descubre destinos rurales de Antioquia con rutas reales, clima en vivo y contacto directo con quienes te reciben.",
   openGraph: {
     type: "website",
     locale: "es_CO",
-    siteName: "Conecta Rural",
-    title: "Conecta Rural · Descubre lo mejor del campo",
+    siteName: "Mi Ruta",
+    title: "Mi Ruta · Tu próxima aventura está más cerca",
     description:
-      "Turismo comunitario en Antioquia con prestadores verificados, rutas reales y WhatsApp directo para descubrir lo mejor del campo.",
+      "Descubre destinos rurales de Antioquia con rutas reales, clima en vivo y contacto directo con quienes te reciben.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Conecta Rural · Descubre lo mejor del campo",
+    title: "Mi Ruta · Tu próxima aventura está más cerca",
     description:
-      "Turismo comunitario en Antioquia con prestadores verificados, rutas reales y WhatsApp directo para descubrir lo mejor del campo.",
+      "Descubre destinos rurales de Antioquia con rutas reales, clima en vivo y contacto directo con quienes te reciben.",
   },
 };
 
