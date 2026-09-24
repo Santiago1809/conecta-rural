@@ -17,9 +17,7 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    "https://mi-ruta-antioquia.vercel.app",
-  ),
+  metadataBase: new URL("https://mi-ruta-antioquia.vercel.app"),
   title: {
     default: "Mi Ruta · Tu próxima aventura está más cerca",
     template: "%s · Mi Ruta",

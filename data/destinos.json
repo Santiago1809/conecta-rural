@@ -16,10 +16,26 @@
     "verificado": true,
     "descripcion": "La Capital Hidroeléctrica de Colombia te sorprenderá con sus 60+ cascadas, charcos naturales como Cielo Escondido y Charco La Quiebra, y la majestuosa Piedra del Peñol. Un paraíso de aventura y naturaleza.",
     "itinerario": [
-      { "hora": "07:00", "titulo": "Salida desde el origen", "detalle": "Buseta por la vía Guatapé-San Carlos." },
-      { "hora": "09:30", "titulo": "Piedra del Peñol", "detalle": "740 escalones para vistas panorámicas." },
-      { "hora": "13:00", "titulo": "Charco La Quiebra", "detalle": "Baño en charco natural profundo." },
-      { "hora": "15:00", "titulo": "Cielo Escondido", "detalle": "Piscina natural rodeada de muros." }
+      {
+        "hora": "07:00",
+        "titulo": "Salida desde el origen",
+        "detalle": "Buseta por la vía Guatapé-San Carlos."
+      },
+      {
+        "hora": "09:30",
+        "titulo": "Piedra del Peñol",
+        "detalle": "740 escalones para vistas panorámicas."
+      },
+      {
+        "hora": "13:00",
+        "titulo": "Charco La Quiebra",
+        "detalle": "Baño en charco natural profundo."
+      },
+      {
+        "hora": "15:00",
+        "titulo": "Cielo Escondido",
+        "detalle": "Piscina natural rodeada de muros."
+      }
     ]
   },
   {
@@ -39,10 +55,26 @@
     "verificado": true,
     "descripcion": "El pueblo más colorido de Antioquia te espera junto al majestuoso Embalse de Guatapé. Sube a la Piedra del Peñol, pasea por sus calles vibrantes y disfruta del agua cristalina del embalse.",
     "itinerario": [
-      { "hora": "06:30", "titulo": "Salida desde el origen", "detalle": "Buseta por la vía Rionegro." },
-      { "hora": "08:30", "titulo": "Pueblo Colorido", "detalle": "Paseo por calles vibrantes y fachadas pintadas." },
-      { "hora": "10:00", "titulo": "Piedra del Peñol", "detalle": "740 escalones, 540 metros de altura." },
-      { "hora": "15:00", "titulo": "Embalse", "detalle": "Paseo en lancha por el embalse." }
+      {
+        "hora": "06:30",
+        "titulo": "Salida desde el origen",
+        "detalle": "Buseta por la vía Rionegro."
+      },
+      {
+        "hora": "08:30",
+        "titulo": "Pueblo Colorido",
+        "detalle": "Paseo por calles vibrantes y fachadas pintadas."
+      },
+      {
+        "hora": "10:00",
+        "titulo": "Piedra del Peñol",
+        "detalle": "740 escalones, 540 metros de altura."
+      },
+      {
+        "hora": "15:00",
+        "titulo": "Embalse",
+        "detalle": "Paseo en lancha por el embalse."
+      }
     ]
   },
   {
@@ -62,10 +94,26 @@
     "verificado": true,
     "descripcion": "A solo 45 minutos de Medellín, este municipio de clima fresco ofrece piscinas naturales, senderos de montaña y la tranquilidad de la campiña antioqueña. Perfecto para desconectar y disfrutar de la brisa de la montaña.",
     "itinerario": [
-      { "hora": "07:00", "titulo": "Salida desde el origen", "detalle": "Bus desde la terminal del Sur." },
-      { "hora": "08:00", "titulo": "Sendero campesino", "detalle": "Caminata por la campiña con miradores." },
-      { "hora": "12:00", "titulo": "Piscinas naturales", "detalle": "Agua fría de montaña para refrescarse." },
-      { "hora": "18:00", "titulo": "Descanso", "detalle": "Cena típica en ambiente de paz." }
+      {
+        "hora": "07:00",
+        "titulo": "Salida desde el origen",
+        "detalle": "Bus desde la terminal del Sur."
+      },
+      {
+        "hora": "08:00",
+        "titulo": "Sendero campesino",
+        "detalle": "Caminata por la campiña con miradores."
+      },
+      {
+        "hora": "12:00",
+        "titulo": "Piscinas naturales",
+        "detalle": "Agua fría de montaña para refrescarse."
+      },
+      {
+        "hora": "18:00",
+        "titulo": "Descanso",
+        "detalle": "Cena típica en ambiente de paz."
+      }
     ]
   },
   {
@@ -85,10 +133,26 @@
     "verificado": true,
     "descripcion": "Sopetrán te invita a recorrer sus calles empedradas de estilo colonial, disfrutar de sus piscinas naturales de agua fría y perderse en la tranquilidad de su campo florido. Un rincón de paz en el Oriente antioqueño.",
     "itinerario": [
-      { "hora": "07:30", "titulo": "Salida desde el origen", "detalle": "Bus vía Copacabana." },
-      { "hora": "09:00", "titulo": "Casco colonial", "detalle": "Recorrido por calles empedradas." },
-      { "hora": "11:00", "titulo": "Mercado local", "detalle": "Flores frescas, artesanías y productos de la tierra." },
-      { "hora": "14:00", "titulo": "Piscinas naturales", "detalle": "Agua fría de montaña en entorno campesino." }
+      {
+        "hora": "07:30",
+        "titulo": "Salida desde el origen",
+        "detalle": "Bus vía Copacabana."
+      },
+      {
+        "hora": "09:00",
+        "titulo": "Casco colonial",
+        "detalle": "Recorrido por calles empedradas."
+      },
+      {
+        "hora": "11:00",
+        "titulo": "Mercado local",
+        "detalle": "Flores frescas, artesanías y productos de la tierra."
+      },
+      {
+        "hora": "14:00",
+        "titulo": "Piscinas naturales",
+        "detalle": "Agua fría de montaña en entorno campesino."
+      }
     ]
   }
 ]

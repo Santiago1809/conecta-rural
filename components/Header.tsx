@@ -16,7 +16,7 @@ export default function Header() {
 
   const movilidadOptions = [
     {
-      title: "Jeeps Willys \"Híbridos o Compartidos\"",
+      title: 'Jeeps Willys "Híbridos o Compartidos"',
       desc: "El Willys es el alma de la zona cafetera. Sistema de rutas compartidas y horarios fijos para el uso de los mismos.",
     },
     {
@@ -80,8 +80,12 @@ export default function Header() {
                     className="block px-4 py-3 hover:bg-soft hover:text-bosque transition-colors first:rounded-t-xl last:rounded-b-xl"
                     onClick={(e) => e.preventDefault()}
                   >
-                    <p className="text-sm font-semibold text-ink">{opt.title}</p>
-                    <p className="mt-1 text-xs text-ink/70 leading-relaxed">{opt.desc}</p>
+                    <p className="text-sm font-semibold text-ink">
+                      {opt.title}
+                    </p>
+                    <p className="mt-1 text-xs text-ink/70 leading-relaxed">
+                      {opt.desc}
+                    </p>
                   </a>
                 ))}
               </div>

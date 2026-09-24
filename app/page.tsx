@@ -38,7 +38,10 @@ export default function Home() {
           <h2 className="font-headline text-2xl font-bold">
             Destinos destacados
           </h2>
-          <Link href="/oferta" className="text-sm font-semibold text-terracota underline">
+          <Link
+            href="/oferta"
+            className="text-sm font-semibold text-terracota underline"
+          >
             Ver toda la oferta
           </Link>
         </div>
@@ -56,7 +59,10 @@ export default function Home() {
             <h2 className="font-headline text-2xl font-bold">
               Primer prestador destacado
             </h2>
-            <Link href="/prestadores" className="text-sm font-semibold text-terracota underline">
+            <Link
+              href="/prestadores"
+              className="text-sm font-semibold text-terracota underline"
+            >
               Ver todos
             </Link>
           </div>
@@ -72,10 +78,13 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-2">
                 <VerifiedBadge />
                 <p className="text-xs font-semibold uppercase tracking-wide text-terracota">
-                  {prestadorDestacado.tipo} · {prestadorDestacado.municipio} · {prestadorDestacado.vereda}
+                  {prestadorDestacado.tipo} · {prestadorDestacado.municipio} ·{" "}
+                  {prestadorDestacado.vereda}
                 </p>
               </div>
-              <h3 className="font-headline text-xl font-bold">{prestadorDestacado.nombre}</h3>
+              <h3 className="font-headline text-xl font-bold">
+                {prestadorDestacado.nombre}
+              </h3>
               <p className="text-sm font-semibold text-bosque">
                 Desde {formatCOP(prestadorDestacado.precio)}
               </p>
@@ -125,12 +134,23 @@ export default function Home() {
         <h2 className="font-headline text-2xl font-bold">¿Cómo funciona?</h2>
         <ol className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {[
-            ["1. Elige tu destino", "Compara tiempos de viaje, clima y transporte por la región."],
-            ["2. Conecta directo", "Escríbele por WhatsApp al prestador verificado, sin intermediarios."],
-            ["3. Arma tu plan", "Guarda fechas y transporte, comparte tu itinerario e imprímelo."],
+            [
+              "1. Elige tu destino",
+              "Compara tiempos de viaje, clima y transporte por la región.",
+            ],
+            [
+              "2. Conecta directo",
+              "Escríbele por WhatsApp al prestador verificado, sin intermediarios.",
+            ],
+            [
+              "3. Arma tu plan",
+              "Guarda fechas y transporte, comparte tu itinerario e imprímelo.",
+            ],
           ].map(([title, desc]) => (
             <li key={title} className="rounded-2xl bg-card p-5 shadow-warm">
-              <p className="font-headline text-base font-bold text-bosque">{title}</p>
+              <p className="font-headline text-base font-bold text-bosque">
+                {title}
+              </p>
               <p className="mt-1 text-sm text-ink/70">{desc}</p>
             </li>
           ))}
