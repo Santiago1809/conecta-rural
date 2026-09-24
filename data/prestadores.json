@@ -1,92 +1,128 @@
 [
   {
-    "nombre": "Finca El Mirador del Embalse",
-    "municipio": "Guatapé",
-    "vereda": "La Piedra",
-    "destino_slug": "guatape",
-    "tipo": "Alojamiento rural",
-    "whatsapp": "573001234567",
-    "telefono": "+57 4 861 0555",
-    "precio": 180000,
-    "codigo_rnt": "12345",
-    "fotos": [
-      "https://images.pexels.com/photos/27435937/pexels-photo-27435937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ],
-    "demo": true,
-    "fotos_credit": [
-      "Photo by Reia Brown on Pexels"
-    ]
-  },
-  {
-    "nombre": "Silleteros de Santa Elena",
+    "nombre": "Don Manuel",
     "municipio": "Medellín",
-    "vereda": "Santa Elena",
-    "destino_slug": "santa-elena",
-    "tipo": "Guianza local",
-    "whatsapp": "573012345678",
-    "telefono": "+57 4 538 0001",
-    "precio": 60000,
-    "codigo_rnt": "23456",
-    "fotos": [
-      "https://images.pexels.com/photos/33436721/pexels-photo-33436721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ],
-    "demo": true,
-    "fotos_credit": [
-      "Photo by Daniel Velez on Pexels"
-    ]
+    "vereda": "Centro",
+    "destino_slug": "medellin",
+    "tipo": "Restaurante",
+    "whatsapp": "+573117211664",
+    "telefono": "+574441234567",
+    "precio": 45000,
+    "codigo_rnt": "1234567890",
+    "fotos": ["https://images.pexels.com/photos/14784322/pexels-photo-14784322.jpeg"],
+    "fotos_credit": ["Pexels"],
+    "demo": false
   },
   {
-    "nombre": "Café Origen Jardín",
-    "municipio": "Jardín",
-    "vereda": "Cristianía",
-    "destino_slug": "jardin",
-    "tipo": "Finca cafetera",
-    "whatsapp": "573023456789",
-    "telefono": "+57 4 845 6112",
-    "precio": 95000,
-    "codigo_rnt": "34567",
+    "nombre": "Ecoturismo San Carlos",
+    "municipio": "San Carlos",
+    "vereda": "La Esperanza",
+    "destino_slug": "san-carlos",
+    "tipo": "Turismo de aventura",
+    "whatsapp": "+573212433035",
+    "telefono": "+574441234568",
+    "precio": 80000,
+    "codigo_rnt": "1234567891",
     "fotos": [
-      "https://images.pexels.com/photos/35629751/pexels-photo-35629751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "https://images.pexels.com/photos/4434483/pexels-photo-4434483.jpeg?auto=compress&cs=tinysrgb&w=800&q=80"
     ],
-    "demo": true,
-    "fotos_credit": [
-      "Photo by Christian Bolanos on Pexels"
-    ]
+    "fotos_credit": ["Pexels"],
+    "demo": false
   },
   {
-    "nombre": "Guarnielería Jericó Tradición",
-    "municipio": "Jericó",
-    "vereda": "El Castillo",
-    "destino_slug": "jerico",
-    "tipo": "Artesanías",
-    "whatsapp": "573034567890",
-    "telefono": "+57 4 852 3030",
-    "precio": 120000,
-    "codigo_rnt": "45678",
+    "nombre": "Guatapé Tours",
+    "municipio": "Guatapé",
+    "vereda": "Centro",
+    "destino_slug": "guatape",
+    "tipo": "Tour en lancha",
+    "whatsapp": "+573122008084",
+    "telefono": "+574441234569",
+    "precio": 40000,
+    "codigo_rnt": "1234567892",
     "fotos": [
-      "https://images.pexels.com/photos/37170281/pexels-photo-37170281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "https://images.pexels.com/photos/14773970/pexels-photo-14773970.jpeg"
     ],
-    "demo": true,
-    "fotos_credit": [
-      "Photo by Miguel Angel Rojas Higuita on Pexels"
-    ]
+    "fotos_credit": ["Pexels"],
+    "demo": false
   },
   {
-    "nombre": "Aventura Río San Rafael",
-    "municipio": "San Rafael",
-    "vereda": "El Charco",
-    "destino_slug": "san-rafael",
-    "tipo": "Operador de aventura",
-    "whatsapp": "573045678901",
-    "telefono": "+57 4 858 4220",
-    "precio": 75000,
-    "codigo_rnt": "56789",
+    "nombre": "Spa Sierra de San Antonio",
+    "municipio": "San Antonio de Pereira",
+    "vereda": "Montaña",
+    "destino_slug": "san-antonio-de-pereira",
+    "tipo": "Spa y bienestar",
+    "whatsapp": "+573135699128",
+    "telefono": "+574441234570",
+    "precio": 65000,
+    "codigo_rnt": "1234567893",
     "fotos": [
-      "https://images.pexels.com/photos/2250521/pexels-photo-2250521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      "https://images.pexels.com/photos/7598363/pexels-photo-7598363.jpeg"
     ],
-    "demo": true,
-    "fotos_credit": [
-      "Photo by Brett Sayles on Pexels"
-    ]
+    "fotos_credit": ["Pexels"],
+    "demo": false
+  },
+  {
+    "nombre": "Café Medellín Real",
+    "municipio": "Medellín",
+    "vereda": "Laureles",
+    "destino_slug": "medellin",
+    "tipo": "Cafetería",
+    "whatsapp": "+573000000015",
+    "telefono": "+574441234571",
+    "precio": 15000,
+    "codigo_rnt": "1234567894",
+    "fotos": [
+      "https://images.pexels.com/photos/16431789/pexels-photo-16431789.jpeg"
+    ],
+    "fotos_credit": ["Pexels"],
+    "demo": false
+  },
+  {
+    "nombre": "Cabañas Río Bosque",
+    "municipio": "San Carlos",
+    "vereda": "La Florida",
+    "destino_slug": "san-carlos",
+    "tipo": "Cabañas",
+    "whatsapp": "+573234905583",
+    "telefono": "+574441234572",
+    "precio": 180000,
+    "codigo_rnt": "1234567895",
+    "fotos": [
+      "https://images.pexels.com/photos/10761592/pexels-photo-10761592.jpeg"
+    ],
+    "fotos_credit": ["Pexels"],
+    "demo": false
+  },
+  {
+    "nombre": "Artesanías de Guatapé",
+    "municipio": "Guatapé",
+    "vereda": "Centro",
+    "destino_slug": "guatape",
+    "tipo": "Tienda de artesanías",
+    "whatsapp": "+573000000017",
+    "telefono": "+574441234573",
+    "precio": 25000,
+    "codigo_rnt": "1234567896",
+    "fotos": [
+      "https://images.pexels.com/photos/39422924/pexels-photo-39422924.jpeg"
+    ],
+    "fotos_credit": ["Pexels"],
+    "demo": false
+  },
+  {
+    "nombre": "Hortalizas de Sopetrán",
+    "municipio": "Sopetrán",
+    "vereda": "Veredas",
+    "destino_slug": "sopetran",
+    "tipo": "Productora orgánica",
+    "whatsapp": "+573137493180",
+    "telefono": "+574441234574",
+    "precio": 35000,
+    "codigo_rnt": "1234567897",
+    "fotos": [
+      "https://images.pexels.com/photos/20819676/pexels-photo-20819676.jpeg"
+    ],
+    "fotos_credit": ["Pexels"],
+    "demo": false
   }
 ]

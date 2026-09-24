@@ -1,56 +1,74 @@
 [
   {
-    "nombre": "Subida a la Piedra + lancha",
+    "nombre": "Subida a la Piedra del Peñol",
+    "categoria": "aventura",
     "destino_slug": "guatape",
-    "categoria": "Aventura",
+    "descripcion": "Súbete a los 740 escalones de la icónica Piedra del Peñol y disfruta de vistas panorámicas del embalse y el pueblo colorido.",
+    "precio": 25000,
+    "foto": "https://images.pexels.com/photos/14352566/pexels-photo-14352566.jpeg",
+    "foto_credit": "Pexels"
+  },
+  {
+    "nombre": "Charco Cielo Escondido",
+    "categoria": "naturaleza",
+    "destino_slug": "san-carlos",
+    "descripcion": "Báñate en este profundo charco rodeado de muros naturales, escondido entre la vegetación de San Carlos.",
+    "precio": 0,
+    "foto": "https://images.pexels.com/photos/13557958/pexels-photo-13557958.jpeg",
+    "foto_credit": "Pexels"
+  },
+  {
+    "nombre": "Tour gastronómico Medellín",
+    "categoria": "gastronomia",
+    "destino_slug": "medellin",
+    "descripcion": "Recorre los mejores restaurantes de Medellín con guía experto: bandeja paisa, arepas de chócolo, mondongo y más.",
     "precio": 85000,
-    "descripcion": "Ascenso guiado a la Piedra del Peñol y paseo en lancha por el embalse.",
-    "foto": "https://images.pexels.com/photos/19771688/pexels-photo-19771688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "foto_credit": "Photo by Giovanna De La Serna on Pexels"
+    "foto": "https://images.pexels.com/photos/262976/pexels-photo-262976.jpeg?auto=compress&cs=tinysrgb&w=800&q=80",
+    "foto_credit": "Pexels"
   },
   {
-    "nombre": "Taller silletero",
-    "destino_slug": "santa-elena",
-    "categoria": "Cultura",
-    "precio": 60000,
-    "descripcion": "Arma tu propia silleta con una familia silletera y camina entre cultivos de flores.",
-    "foto": "https://images.pexels.com/photos/27087919/pexels-photo-27087919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "foto_credit": "Photo by Luis Ariza on Pexels"
+    "nombre": "Paseo en lancha por el Embalse",
+    "categoria": "aventura",
+    "destino_slug": "guatape",
+    "descripcion": "Disfruta de un paseo en lancha por el majestuoso Embalse de Guatapé con vistas a la Piedra del Peñol.",
+    "precio": 40000,
+    "foto": "https://images.pexels.com/photos/20660444/pexels-photo-20660444.jpeg",
+    "foto_credit": "Pexels"
   },
   {
-    "nombre": "Tour cafetero de origen",
-    "destino_slug": "jardin",
-    "categoria": "Gastronomía",
-    "precio": 95000,
-    "descripcion": "Del cafetal a la taza: beneficio, tostión y cata con familia productora.",
-    "foto": "https://images.pexels.com/photos/35923206/pexels-photo-35923206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "foto_credit": "Photo by Mateo Arbelaez on Pexels"
+    "nombre": "Cascada La Chorrera",
+    "categoria": "naturaleza",
+    "destino_slug": "san-carlos",
+    "descripcion": "Una caminata hasta la majestuosa cascada de más de 420 metros de caída en el corazón de San Carlos.",
+    "precio": 0,
+    "foto": "https://images.pexels.com/photos/16945301/pexels-photo-16945301.jpeg",
+    "foto_credit": "Pexels"
   },
   {
-    "nombre": "Tubing en el río",
-    "destino_slug": "san-rafael",
-    "categoria": "Aventura",
-    "precio": 75000,
-    "descripcion": "Descenso guiado en flotador por rápidos suaves, con equipo de seguridad.",
-    "foto": "https://images.pexels.com/photos/13737937/pexels-photo-13737937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "foto_credit": "Photo by Daniel Ciubarov on Pexels"
+    "nombre": "Yoga en la Montaña",
+    "categoria": "bienestar",
+    "destino_slug": "san-antonio-de-pereira",
+    "descripcion": "Clase de yoga al amanecer en las terrazas naturales de San Antonio de Pereira con vistas a la campiña.",
+    "precio": 30000,
+    "foto": "https://images.pexels.com/photos/4945278/pexels-photo-4945278.jpeg",
+    "foto_credit": "Pexels"
   },
   {
-    "nombre": "Ruta Madre Laura",
-    "destino_slug": "jerico",
-    "categoria": "Cultura",
-    "precio": 55000,
-    "descripcion": "Recorrido patrimonial por la casa natal, museos y capillas de Jericó.",
-    "foto": "https://images.pexels.com/photos/35484145/pexels-photo-35484145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "foto_credit": "Photo by Enzo Renz on Pexels"
+    "nombre": "Mercado de Sopetrán",
+    "categoria": "cultura",
+    "destino_slug": "sopetran",
+    "descripcion": "Pasea por el mercado local de Sopetrán y descubre artesanías, flores frescas y productos de la tierra.",
+    "precio": 0,
+    "foto": "https://images.pexels.com/photos/14413312/pexels-photo-14413312.jpeg",
+    "foto_credit": "Pexels"
   },
   {
-    "nombre": "Cocina de leña campesina",
-    "destino_slug": "santa-elena",
-    "categoria": "Gastronomía",
-    "precio": 70000,
-    "descripcion": "Prepara sancocho y arepas en fogón de leña con cocineras tradicionales.",
-    "foto": "https://images.pexels.com/photos/7140286/pexels-photo-7140286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "foto_credit": "Photo by Filirovska on Pexels"
+    "nombre": "Tour Comuna 13",
+    "categoria": "cultura",
+    "destino_slug": "medellin",
+    "descripcion": "Recorrido por los coloridos murales y escaleras eléctricas de la Comuna 13, símbolo de la transformación urbana de Medellín.",
+    "precio": 50000,
+    "foto": "https://images.pexels.com/photos/37278677/pexels-photo-37278677.jpeg",
+    "foto_credit": "Pexels"
   }
 ]

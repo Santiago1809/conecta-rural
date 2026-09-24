@@ -3,6 +3,7 @@ import DestinationCard from "@/components/DestinationCard";
 import SearchBar from "@/components/SearchBar";
 import VerifiedBadge from "@/components/VerifiedBadge";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MunicipalityCarousel from "@/components/MunicipalityCarousel";
 import { DESTINOS, PRESTADORES, formatCOP } from "@/lib/data";
 
 // Bienvenida: hero, search, featured cards, community insights.
@@ -11,18 +12,23 @@ export default function Home() {
   const prestadorDestacado = PRESTADORES[0];
   return (
     <div className="flex flex-col gap-12 py-8">
-      {/* Hero */}
-      <section className="overflow-hidden rounded-3xl bg-bosque-deep px-6 py-12 text-white shadow-warm sm:px-12 sm:py-16">
-        <div className="flex max-w-2xl flex-col gap-4">
-          <VerifiedBadge label="Turismo comunitario verificado" />
-          <h1 className="font-headline text-3xl font-extrabold leading-tight sm:text-5xl">
-            Tu próxima aventura está más cerca de lo que imaginas
-          </h1>
-          <p className="text-base text-white/80 sm:text-lg">
-            Destinos rurales de Antioquia con rutas reales, clima en vivo y
-            contacto directo con quienes te reciben.
-          </p>
-          <SearchBar />
+      {/* Hero: logo + carousel */}
+      <section className="overflow-hidden rounded-3xl bg-canvas px-0 py-0 text-ink shadow-warm sm:px-0">
+        <div className="flex flex-col items-center gap-6 p-6 sm:p-8">
+          <div className="flex w-full justify-center">
+            <MunicipalityCarousel />
+          </div>
+          <div className="flex flex-col items-center gap-4 text-center">
+            <VerifiedBadge label="Turismo comunitario verificado" />
+            <h1 className="font-headline text-2xl font-extrabold leading-tight sm:text-4xl">
+              Tu próxima aventura está más cerca de lo que imaginas
+            </h1>
+            <p className="text-base text-ink/70 sm:text-lg">
+              Destinos rurales de Antioquia con rutas reales, clima en vivo y
+              contacto directo con quienes te reciben.
+            </p>
+            <SearchBar />
+          </div>
         </div>
       </section>
 

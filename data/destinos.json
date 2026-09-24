@@ -1,236 +1,117 @@
 [
   {
+    "slug": "medellin",
+    "nombre": "Medellín",
+    "municipio": "Medellín",
+    "vereda": "Centro",
+    "lat": 6.2442,
+    "lon": -75.5812,
+    "tiempo_aprox": "15 min",
+    "consejo": "Visita el Parque Lleras y Plaza Botero para la cultura urbana de Medellín.",
+    "hero": "https://images.pexels.com/photos/33437205/pexels-photo-33437205.jpeg?auto=compress&cs=tinysrgb&w=1280&q=80",
+    "hero_credit": "Pexels – Vibrant Medellín Cityscape Under Blue Skies",
+    "transporte": ["Metro", "Bus urbano", "Taxi", "Uber"],
+    "tiempos_transporte": { "desde_medellin": "15-30 min" },
+    "precio_desde": 80000,
+    "verificado": true,
+    "descripcion": "La capital de Antioquia te espera con su transformación urbana, museos de clase mundial, gastronomía diversa y la cálida hospitalidad paisa. Desde la Plaza Botero hasta el Parque Lleras, Medellín combina historia, arte y vida nocturna.",
+    "itinerario": [
+      { "hora": "08:00", "titulo": "Parque Lleras", "detalle": "Recorre la vida nocturna y comercial del sector." },
+      { "hora": "12:00", "titulo": "Museo de Antioquia", "detalle": "Obra de Fernando Botero y patrimonio cultural." },
+      { "hora": "16:00", "titulo": "Plaza Botero", "detalle": "Las famosas esculturas y el ambiente paisa." },
+      { "hora": "20:00", "titulo": "Comuna 13", "detalle": "Murales, escaleras eléctricas y transformación urbana." }
+    ]
+  },
+  {
+    "slug": "san-carlos",
+    "nombre": "San Carlos",
+    "municipio": "San Carlos",
+    "vereda": "Centro",
+    "lat": 6.2022,
+    "lon": -75.3428,
+    "tiempo_aprox": "2.5 h",
+    "consejo": "Lleva ropa de baño para disfrutar de los charcos naturales y cascadas.",
+    "hero": "https://images.pexels.com/photos/13784088/pexels-photo-13784088.jpeg?auto=compress&cs=tinysrgb&w=1280&q=80",
+    "hero_credit": "Pexels – Waterfall Cascading Over Rocks in Antioquia",
+    "transporte": ["Buseta"],
+    "tiempos_transporte": { "desde_medellin": "2-3 h" },
+    "precio_desde": 60000,
+    "verificado": true,
+    "descripcion": "La Capital Hidroeléctrica de Colombia te sorprenderá con sus 60+ cascadas, charcos naturales como Cielo Escondido y Charco La Quiebra, y la majestuosa Piedra del Peñol. Un paraíso de aventura y naturaleza.",
+    "itinerario": [
+      { "hora": "07:00", "titulo": "Salida de Medellín", "detalle": "Buseta por la vía Guatapé-San Carlos." },
+      { "hora": "09:30", "titulo": "Piedra del Peñol", "detalle": "740 escalones para vistas panorámicas." },
+      { "hora": "13:00", "titulo": "Charco La Quiebra", "detalle": "Baño en charco natural profundo." },
+      { "hora": "15:00", "titulo": "Cielo Escondido", "detalle": "Piscina natural rodeada de muros." }
+    ]
+  },
+  {
     "slug": "guatape",
     "nombre": "Guatapé",
     "municipio": "Guatapé",
-    "vereda": "La Piedra",
-    "lat": 6.0312,
-    "lon": -75.4261,
-    "tiempo_aprox": "2 h desde Medellín",
-    "consejo": "Sube a la Piedra temprano para evitar la niebla del mediodía y lleva impermeable: el clima cambia rápido.",
-    "hero": "https://images.pexels.com/photos/12470916/pexels-photo-12470916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "hero_credit": "Photo by Nick Wehrli on Pexels",
-    "transporte": [
-      "bus",
-      "chiva",
-      "carro_4x4",
-      "caballo_caminata"
-    ],
-    "tiempos_transporte": {
-      "bus": "2 h 30 min",
-      "chiva": "3 h",
-      "carro_4x4": "2 h",
-      "caballo_caminata": "3 h 30 min"
-    },
-    "precio_desde": 85000,
+    "vereda": "Centro",
+    "lat": 6.2389,
+    "lon": -75.1878,
+    "tiempo_aprox": "2 h",
+    "consejo": "Sube a la Piedra del Peñol (740 escalones) para vistas panorámicas del embalse.",
+    "hero": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR81HX-Hwm-ZooYOHm2uae-_8Xe4BaMjH6-06pkWdXqzg&s=10",
+    "hero_credit": "Pexels – Colorful Rickshaw in the Colombian Town of Guatape",
+    "transporte": ["Buseta"],
+    "tiempos_transporte": { "desde_medellin": "2 h" },
+    "precio_desde": 70000,
     "verificado": true,
-    "descripcion": "Pueblo de zócalos coloridos a orillas del embalse. Ideal para miradores, paseos en lancha y café de origen.",
+    "descripcion": "El pueblo más colorido de Antioquia te espera junto al majestuoso Embalse de Guatapé. Sube a la Piedra del Peñol, pasea por sus calles vibrantes y disfruta del agua cristalina del embalse.",
     "itinerario": [
-      {
-        "hora": "07:00",
-        "titulo": "Salida desde Medellín",
-        "detalle": "Terminal del Norte, taquilla 12. Compra el tiquete de ida y vuelta."
-      },
-      {
-        "hora": "09:00",
-        "titulo": "Subida a la Piedra del Peñol",
-        "detalle": "740 escalones con mirador 360°. Lleva agua y bloqueador."
-      },
-      {
-        "hora": "12:30",
-        "titulo": "Almuerzo en el malecón",
-        "detalle": "Bandeja paisa o trucha del embalse en restaurantes locales."
-      },
-      {
-        "hora": "15:00",
-        "titulo": "Paseo en lancha",
-        "detalle": "Recorrido de 1 hora por el embalse con chaleco incluido."
-      }
+      { "hora": "06:30", "titulo": "Salida de Medellín", "detalle": "Buseta por la vía Rionegro." },
+      { "hora": "08:30", "titulo": "Pueblo Colorido", "detalle": "Paseo por calles vibrantes y fachadas pintadas." },
+      { "hora": "10:00", "titulo": "Piedra del Peñol", "detalle": "740 escalones, 540 metros de altura." },
+      { "hora": "15:00", "titulo": "Embalse", "detalle": "Paseo en lancha por el embalse." }
     ]
   },
   {
-    "slug": "santa-elena",
-    "nombre": "Santa Elena",
-    "municipio": "Medellín",
-    "vereda": "Santa Elena",
-    "lat": 6.21,
-    "lon": -75.49,
-    "tiempo_aprox": "1 h desde Medellín",
-    "consejo": "Las mañanas son frescas (12-16 °C): lleva chaqueta ligera y calzado cerrado para los senderos.",
-    "hero": "https://images.pexels.com/photos/33437856/pexels-photo-33437856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "hero_credit": "Photo by Daniel Velez on Pexels",
-    "transporte": [
-      "bus",
-      "chiva",
-      "caballo_caminata"
-    ],
-    "tiempos_transporte": {
-      "bus": "1 h 20 min",
-      "chiva": "1 h 45 min",
-      "caballo_caminata": "2 h 30 min"
-    },
-    "precio_desde": 60000,
+    "slug": "san-antonio-de-pereira",
+    "nombre": "San Antonio de Pereira",
+    "municipio": "San Antonio de Pereira",
+    "vereda": "Centro",
+    "lat": 6.1717,
+    "lon": -75.5731,
+    "tiempo_aprox": "45 min",
+    "consejo": "Lleva ropa abrigada; la temperatura es fresca y agradable, ideal para descansar.",
+    "hero": "https://images.pexels.com/photos/17382130/pexels-photo-17382130.jpeg?auto=compress&cs=tinysrgb&w=1280&q=80",
+    "hero_credit": "Pexels – Colombian Mountain Town Summer",
+    "transporte": ["Bus"],
+    "tiempos_transporte": { "desde_medellin": "45 min-1 h" },
+    "precio_desde": 50000,
     "verificado": true,
-    "descripcion": "Corregimiento de flores y bosque de niebla. Cuna de los silleteros y del Parque Arví.",
+    "descripcion": "A solo 45 minutos de Medellín, este municipio de clima fresco ofrece piscinas naturales, senderos de montaña y la tranquilidad de la campiña antioqueña. Perfecto para desconectar y disfrutar de la brisa de la montaña.",
     "itinerario": [
-      {
-        "hora": "08:00",
-        "titulo": "Metrocable al Parque Arví",
-        "detalle": "Línea L desde Santo Domingo. Vista panorámica del valle."
-      },
-      {
-        "hora": "10:00",
-        "titulo": "Sendero de los silleteros",
-        "detalle": "Caminata guiada de 2 h entre fincas floricultoras."
-      },
-      {
-        "hora": "13:00",
-        "titulo": "Almuerzo campesino",
-        "detalle": "Sancocho de gallina en fonda veredal con productos locales."
-      }
+      { "hora": "07:00", "titulo": "Salida de Medellín", "detalle": "Bus desde la terminal del Sur." },
+      { "hora": "08:00", "titulo": "Sendero campesino", "detalle": "Caminata por la campiña con miradores." },
+      { "hora": "12:00", "titulo": "Piscinas naturales", "detalle": "Agua fría de montaña para refrescarse." },
+      { "hora": "18:00", "titulo": "Descanso", "detalle": "Cena típica en ambiente de paz." }
     ]
   },
   {
-    "slug": "jardin",
-    "nombre": "Jardín",
-    "municipio": "Jardín",
-    "vereda": "Cristianía",
-    "lat": 5.6,
-    "lon": -75.82,
-    "tiempo_aprox": "3 h 30 min desde Medellín",
-    "consejo": "Lleva binoculares: es zona de avistamiento del gallito de roca al amanecer.",
-    "hero": "https://images.pexels.com/photos/15020185/pexels-photo-15020185.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "hero_credit": "Photo by Cesar Vasquez on Pexels",
-    "transporte": [
-      "bus",
-      "chiva",
-      "carro_4x4"
-    ],
-    "tiempos_transporte": {
-      "bus": "4 h",
-      "chiva": "4 h 30 min",
-      "carro_4x4": "3 h 30 min"
-    },
-    "precio_desde": 95000,
+    "slug": "sopetran",
+    "nombre": "Sopetrán",
+    "municipio": "Sopetrán",
+    "vereda": "Centro",
+    "lat": 6.2389,
+    "lon": -75.7428,
+    "tiempo_aprox": "1.5 h",
+    "consejo": "Disfruta de las piscinas naturales y el ambiente tranquilo de este pueblo colonial.",
+    "hero": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShTCGk7qvjdI7U9Gd_jmHyZOSVLlFhVQeQtNXSXjpHLw&s=10",
+    "hero_credit": "Pexels – Colonial Street in Colombian Town",
+    "transporte": ["Bus"],
+    "tiempos_transporte": { "desde_medellin": "1.5 h" },
+    "precio_desde": 55000,
     "verificado": true,
-    "descripcion": "Pueblo patrimonio con balcones coloniales, café de altura y la cueva del gallito de roca.",
+    "descripcion": "Sopetrán te invita a recorrer sus calles empedradas de estilo colonial, disfrutar de sus piscinas naturales de agua fría y perderse en la tranquilidad de su campo florido. Un rincón de paz en el Oriente antioqueño.",
     "itinerario": [
-      {
-        "hora": "06:30",
-        "titulo": "Salida desde Medellín",
-        "detalle": "Terminal del Sur. El trayecto bordea el río Cauca."
-      },
-      {
-        "hora": "10:00",
-        "titulo": "Teleférico La Garrucha",
-        "detalle": "Vista del pueblo y cafetales. Tiquete ida y vuelta."
-      },
-      {
-        "hora": "12:00",
-        "titulo": "Tour cafetero",
-        "detalle": "Beneficio, tostión y cata en finca familiar."
-      },
-      {
-        "hora": "16:00",
-        "titulo": "Plaza principal",
-        "detalle": "Dulces típicos y café en la basílica Menor."
-      }
-    ]
-  },
-  {
-    "slug": "jerico",
-    "nombre": "Jericó",
-    "municipio": "Jericó",
-    "vereda": "El Castillo",
-    "lat": 5.79,
-    "lon": -75.78,
-    "tiempo_aprox": "3 h desde Medellín",
-    "consejo": "El atardecer desde el cerro El Salvador es el mejor plan: llega 30 minutos antes.",
-    "hero": "https://images.pexels.com/photos/35484219/pexels-photo-35484219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "hero_credit": "Photo by Enzo Renz on Pexels",
-    "transporte": [
-      "bus",
-      "chiva",
-      "carro_4x4",
-      "caballo_caminata"
-    ],
-    "tiempos_transporte": {
-      "bus": "3 h 30 min",
-      "chiva": "4 h",
-      "carro_4x4": "3 h",
-      "caballo_caminata": "4 h 30 min"
-    },
-    "precio_desde": 90000,
-    "verificado": true,
-    "descripcion": "Tierra de la Madre Laura. Museos, guarnielería y miradores sobre el suroeste antioqueño.",
-    "itinerario": [
-      {
-        "hora": "07:00",
-        "titulo": "Salida desde Medellín",
-        "detalle": "Terminal del Sur, servicio directo."
-      },
-      {
-        "hora": "10:30",
-        "titulo": "Museo de la Madre Laura",
-        "detalle": "Casa natal y memoria de la santa colombiana."
-      },
-      {
-        "hora": "13:00",
-        "titulo": "Almuerzo y guarnielería",
-        "detalle": "Taller de cuero tradicional con demostración en vivo."
-      },
-      {
-        "hora": "17:30",
-        "titulo": "Atardecer en El Salvador",
-        "detalle": "Mirador del cerro con vista al cañón del Cauca."
-      }
-    ]
-  },
-  {
-    "slug": "san-rafael",
-    "nombre": "San Rafael",
-    "municipio": "San Rafael",
-    "vereda": "El Charco",
-    "lat": 6.29,
-    "lon": -75.02,
-    "tiempo_aprox": "3 h desde Medellín",
-    "consejo": "Ríos y charcos de agua fría: empaca vestido de baño, toalla de microfibra y zapatos de río.",
-    "hero": "https://images.pexels.com/photos/32403583/pexels-photo-32403583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "hero_credit": "Photo by Paul Scharf on Pexels",
-    "transporte": [
-      "bus",
-      "carro_4x4",
-      "caballo_caminata"
-    ],
-    "tiempos_transporte": {
-      "bus": "4 h",
-      "carro_4x4": "3 h",
-      "caballo_caminata": "4 h 30 min"
-    },
-    "precio_desde": 75000,
-    "verificado": true,
-    "descripcion": "Capital de los charcos del Oriente. Tubing, senderismo y trapiches paneleros.",
-    "itinerario": [
-      {
-        "hora": "06:00",
-        "titulo": "Salida desde Medellín",
-        "detalle": "Terminal del Norte vía Guarne - San Rafael."
-      },
-      {
-        "hora": "09:30",
-        "titulo": "Tubing por el río",
-        "detalle": "Descenso guiado de 2 h con equipo de seguridad."
-      },
-      {
-        "hora": "13:00",
-        "titulo": "Almuerzo ribereño",
-        "detalle": "Sancocho trifásico y guarapo de caña."
-      },
-      {
-        "hora": "15:00",
-        "titulo": "Charco El Biscocho",
-        "detalle": "Tarde de baño en aguas cristalinas con salvavidas."
-      }
+      { "hora": "07:30", "titulo": "Salida de Medellín", "detalle": "Bus vía Copacabana." },
+      { "hora": "09:00", "titulo": "Casco colonial", "detalle": "Recorrido por calles empedradas." },
+      { "hora": "11:00", "titulo": "Mercado local", "detalle": "Flores frescas, artesanías y productos de la tierra." },
+      { "hora": "14:00", "titulo": "Piscinas naturales", "detalle": "Agua fría de montaña en entorno campesino." }
     ]
   }
 ]

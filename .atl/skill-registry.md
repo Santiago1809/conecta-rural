@@ -12,7 +12,6 @@ Last updated: 2026-09-23
 - /home/santiago/.claude/skills
 - /home/santiago/.copilot/skills
 - /home/santiago/.codex/skills
-- /home/santiago/.kiro/skills
 - /home/santiago/.hermes/skills
 
 ## Contract
