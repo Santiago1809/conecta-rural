@@ -125,7 +125,7 @@ export default function Home() {
         <h2 className="font-headline text-2xl font-bold">¿Cómo funciona?</h2>
         <ol className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {[
-            ["1. Elige tu destino", "Compara tiempos de viaje, clima y transporte desde Medellín."],
+            ["1. Elige tu destino", "Compara tiempos de viaje, clima y transporte por la región."],
             ["2. Conecta directo", "Escríbele por WhatsApp al prestador verificado, sin intermediarios."],
             ["3. Arma tu plan", "Guarda fechas y transporte, comparte tu itinerario e imprímelo."],
           ].map(([title, desc]) => (

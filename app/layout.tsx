@@ -44,8 +44,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${headline.variable} ${body.variable} h-full`}>
-      <body className="flex min-h-full flex-col bg-canvas font-body text-ink antialiased">
+    <html
+      lang="es"
+      suppressHydrationWarning
+      className={`${headline.variable} ${body.variable} h-full`}
+    >
+      <body
+        suppressHydrationWarning
+        className="flex min-h-full flex-col bg-canvas font-body text-ink antialiased"
+      >
         <Header />
         <main className="mx-auto w-full max-w-7xl flex-1 px-4 sm:px-6">
           {children}

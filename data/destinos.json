@@ -1,28 +1,5 @@
 [
   {
-    "slug": "medellin",
-    "nombre": "Medellín",
-    "municipio": "Medellín",
-    "vereda": "Centro",
-    "lat": 6.2442,
-    "lon": -75.5812,
-    "tiempo_aprox": "15 min",
-    "consejo": "Visita el Parque Lleras y Plaza Botero para la cultura urbana de Medellín.",
-    "hero": "https://images.pexels.com/photos/33437205/pexels-photo-33437205.jpeg?auto=compress&cs=tinysrgb&w=1280&q=80",
-    "hero_credit": "Pexels – Vibrant Medellín Cityscape Under Blue Skies",
-    "transporte": ["Metro", "Bus urbano", "Taxi", "Uber"],
-    "tiempos_transporte": { "desde_medellin": "15-30 min" },
-    "precio_desde": 80000,
-    "verificado": true,
-    "descripcion": "La capital de Antioquia te espera con su transformación urbana, museos de clase mundial, gastronomía diversa y la cálida hospitalidad paisa. Desde la Plaza Botero hasta el Parque Lleras, Medellín combina historia, arte y vida nocturna.",
-    "itinerario": [
-      { "hora": "08:00", "titulo": "Parque Lleras", "detalle": "Recorre la vida nocturna y comercial del sector." },
-      { "hora": "12:00", "titulo": "Museo de Antioquia", "detalle": "Obra de Fernando Botero y patrimonio cultural." },
-      { "hora": "16:00", "titulo": "Plaza Botero", "detalle": "Las famosas esculturas y el ambiente paisa." },
-      { "hora": "20:00", "titulo": "Comuna 13", "detalle": "Murales, escaleras eléctricas y transformación urbana." }
-    ]
-  },
-  {
     "slug": "san-carlos",
     "nombre": "San Carlos",
     "municipio": "San Carlos",
@@ -39,7 +16,7 @@
     "verificado": true,
     "descripcion": "La Capital Hidroeléctrica de Colombia te sorprenderá con sus 60+ cascadas, charcos naturales como Cielo Escondido y Charco La Quiebra, y la majestuosa Piedra del Peñol. Un paraíso de aventura y naturaleza.",
     "itinerario": [
-      { "hora": "07:00", "titulo": "Salida de Medellín", "detalle": "Buseta por la vía Guatapé-San Carlos." },
+      { "hora": "07:00", "titulo": "Salida desde el origen", "detalle": "Buseta por la vía Guatapé-San Carlos." },
       { "hora": "09:30", "titulo": "Piedra del Peñol", "detalle": "740 escalones para vistas panorámicas." },
       { "hora": "13:00", "titulo": "Charco La Quiebra", "detalle": "Baño en charco natural profundo." },
       { "hora": "15:00", "titulo": "Cielo Escondido", "detalle": "Piscina natural rodeada de muros." }
@@ -62,7 +39,7 @@
     "verificado": true,
     "descripcion": "El pueblo más colorido de Antioquia te espera junto al majestuoso Embalse de Guatapé. Sube a la Piedra del Peñol, pasea por sus calles vibrantes y disfruta del agua cristalina del embalse.",
     "itinerario": [
-      { "hora": "06:30", "titulo": "Salida de Medellín", "detalle": "Buseta por la vía Rionegro." },
+      { "hora": "06:30", "titulo": "Salida desde el origen", "detalle": "Buseta por la vía Rionegro." },
       { "hora": "08:30", "titulo": "Pueblo Colorido", "detalle": "Paseo por calles vibrantes y fachadas pintadas." },
       { "hora": "10:00", "titulo": "Piedra del Peñol", "detalle": "740 escalones, 540 metros de altura." },
       { "hora": "15:00", "titulo": "Embalse", "detalle": "Paseo en lancha por el embalse." }
@@ -85,7 +62,7 @@
     "verificado": true,
     "descripcion": "A solo 45 minutos de Medellín, este municipio de clima fresco ofrece piscinas naturales, senderos de montaña y la tranquilidad de la campiña antioqueña. Perfecto para desconectar y disfrutar de la brisa de la montaña.",
     "itinerario": [
-      { "hora": "07:00", "titulo": "Salida de Medellín", "detalle": "Bus desde la terminal del Sur." },
+      { "hora": "07:00", "titulo": "Salida desde el origen", "detalle": "Bus desde la terminal del Sur." },
       { "hora": "08:00", "titulo": "Sendero campesino", "detalle": "Caminata por la campiña con miradores." },
       { "hora": "12:00", "titulo": "Piscinas naturales", "detalle": "Agua fría de montaña para refrescarse." },
       { "hora": "18:00", "titulo": "Descanso", "detalle": "Cena típica en ambiente de paz." }
@@ -108,7 +85,7 @@
     "verificado": true,
     "descripcion": "Sopetrán te invita a recorrer sus calles empedradas de estilo colonial, disfrutar de sus piscinas naturales de agua fría y perderse en la tranquilidad de su campo florido. Un rincón de paz en el Oriente antioqueño.",
     "itinerario": [
-      { "hora": "07:30", "titulo": "Salida de Medellín", "detalle": "Bus vía Copacabana." },
+      { "hora": "07:30", "titulo": "Salida desde el origen", "detalle": "Bus vía Copacabana." },
       { "hora": "09:00", "titulo": "Casco colonial", "detalle": "Recorrido por calles empedradas." },
       { "hora": "11:00", "titulo": "Mercado local", "detalle": "Flores frescas, artesanías y productos de la tierra." },
       { "hora": "14:00", "titulo": "Piscinas naturales", "detalle": "Agua fría de montaña en entorno campesino." }

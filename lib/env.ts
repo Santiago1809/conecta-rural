@@ -1,7 +1,7 @@
 // Central environment constants. No secrets: every live source works without a key.
 
 /** Fixed trip origin for all route estimates. */
-export const MEDELLIN_ORIGIN = { lat: 6.2442, lon: -75.5812, label: "Medellín" } as const;
+export const MEDELLIN_ORIGIN = { lat: 6.2442, lon: -75.5812, label: "Punto de partida" } as const;
 
 /** Nominatim requires a descriptive User-Agent. */
 export const NOMINATIM_USER_AGENT = "MiRuta/0.1 (contacto@miruta.co)";

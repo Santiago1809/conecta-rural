@@ -1,19 +1,5 @@
 [
   {
-    "nombre": "Don Manuel",
-    "municipio": "Medellín",
-    "vereda": "Centro",
-    "destino_slug": "medellin",
-    "tipo": "Restaurante",
-    "whatsapp": "+573117211664",
-    "telefono": "+574441234567",
-    "precio": 45000,
-    "codigo_rnt": "1234567890",
-    "fotos": ["https://images.pexels.com/photos/14784322/pexels-photo-14784322.jpeg"],
-    "fotos_credit": ["Pexels"],
-    "demo": false
-  },
-  {
     "nombre": "Ecoturismo San Carlos",
     "municipio": "San Carlos",
     "vereda": "La Esperanza",
@@ -57,22 +43,6 @@
     "codigo_rnt": "1234567893",
     "fotos": [
       "https://images.pexels.com/photos/7598363/pexels-photo-7598363.jpeg"
-    ],
-    "fotos_credit": ["Pexels"],
-    "demo": false
-  },
-  {
-    "nombre": "Café Medellín Real",
-    "municipio": "Medellín",
-    "vereda": "Laureles",
-    "destino_slug": "medellin",
-    "tipo": "Cafetería",
-    "whatsapp": "+573000000015",
-    "telefono": "+574441234571",
-    "precio": 15000,
-    "codigo_rnt": "1234567894",
-    "fotos": [
-      "https://images.pexels.com/photos/16431789/pexels-photo-16431789.jpeg"
     ],
     "fotos_credit": ["Pexels"],
     "demo": false

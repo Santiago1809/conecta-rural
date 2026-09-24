@@ -1,17 +1,5 @@
 [
   {
-    "nombre": "Hotel Villa Real",
-    "destino_slug": "medellin",
-    "municipio": "Medellín",
-    "vereda": "Laureles - Estadio",
-    "precio": 120000,
-    "whatsapp": "+573021211884",
-    "descripcion": "Hotel de 112 habitaciones en Laureles-Estadio, con recepción 24 horas, wifi gratis, TV por cable, restaurante y parking privado. Ubicado en Cra. 70 #45E-153, a 4.7 km del centro de Medellín.",
-    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXs1-tcNvs5LDRzhqH7pNrmZHr5kSoCG2jmH-KXPByAw&s=10",
-    "foto_credit": "Pexels",
-    "demo": false
-  },
-  {
     "nombre": "Hotel Real Guatapé",
     "destino_slug": "guatape",
     "municipio": "Guatapé",
@@ -66,7 +54,7 @@
     "vereda": "Centro",
     "precio": 95000,
     "whatsapp": "+573135699128",
-    "descripcion": "Hospedaje acogedor en el centro de San Antonio de Pereira, a pocos minutos de Medellín. Habitaciones cómodas, wifi gratis y cerca de la zona gastronómica del pueblo.",
+    "descripcion": "Hospedaje acogedor en el centro de San Antonio de Pereira, a pocos minutos del casco urbano. Habitaciones cómodas, wifi gratis y cerca de la zona gastronómica del pueblo.",
     "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2YuO-4KeqQHhwA52KN6B8YEYsyuN3d8xXIHFZ-5I_Sg&s=10",
     "foto_credit": "Pexels",
     "demo": false

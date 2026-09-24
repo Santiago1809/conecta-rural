@@ -18,15 +18,6 @@
     "foto_credit": "Pexels"
   },
   {
-    "nombre": "Tour gastronómico Medellín",
-    "categoria": "gastronomia",
-    "destino_slug": "medellin",
-    "descripcion": "Recorre los mejores restaurantes de Medellín con guía experto: bandeja paisa, arepas de chócolo, mondongo y más.",
-    "precio": 85000,
-    "foto": "https://images.pexels.com/photos/262976/pexels-photo-262976.jpeg?auto=compress&cs=tinysrgb&w=800&q=80",
-    "foto_credit": "Pexels"
-  },
-  {
     "nombre": "Paseo en lancha por el Embalse",
     "categoria": "aventura",
     "destino_slug": "guatape",
@@ -60,15 +51,6 @@
     "descripcion": "Pasea por el mercado local de Sopetrán y descubre artesanías, flores frescas y productos de la tierra.",
     "precio": 0,
     "foto": "https://images.pexels.com/photos/14413312/pexels-photo-14413312.jpeg",
-    "foto_credit": "Pexels"
-  },
-  {
-    "nombre": "Tour Comuna 13",
-    "categoria": "cultura",
-    "destino_slug": "medellin",
-    "descripcion": "Recorrido por los coloridos murales y escaleras eléctricas de la Comuna 13, símbolo de la transformación urbana de Medellín.",
-    "precio": 50000,
-    "foto": "https://images.pexels.com/photos/37278677/pexels-photo-37278677.jpeg",
     "foto_credit": "Pexels"
   }
 ]

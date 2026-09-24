@@ -43,7 +43,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-inputborder/60 bg-[#F2F6E2] backdrop-blur">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link
           href="/"
           className="flex items-center gap-2"
@@ -52,10 +52,10 @@ export default function Header() {
           <Image
             src="/logo.jpeg"
             alt="Mi Ruta · Antioquia auténtica"
-            width={190}
-            height={48}
+            width={360}
+            height={126}
             priority
-            className="h-9 w-auto"
+            className="h-16 w-auto sm:h-20"
           />
         </Link>
         <nav

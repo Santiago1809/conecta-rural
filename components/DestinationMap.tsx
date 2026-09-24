@@ -43,7 +43,7 @@ export default function DestinationMap({ destLat, destLon, destName, geometry }:
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <CircleMarker center={ORIGIN} radius={8} pathOptions={{ color: "#1E4B37", fillColor: "#1E4B37", fillOpacity: 1 }}>
-        <Popup>Medellín · punto de partida</Popup>
+        <Popup>Punto de partida</Popup>
       </CircleMarker>
       <CircleMarker center={dest} radius={8} pathOptions={{ color: "#C85A32", fillColor: "#C85A32", fillOpacity: 1 }}>
         <Popup>{destName}</Popup>
