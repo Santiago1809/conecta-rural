@@ -100,7 +100,8 @@ body {
   background: var(--color-terracota);
 }
 
-@media print {  header,
+@media print {
+  header,
   footer,
   .no-print {
     display: none !important;

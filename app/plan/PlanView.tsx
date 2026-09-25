@@ -15,7 +15,13 @@ import { loadPlan, removePlanItem, type PlanItem } from "@/lib/plan";
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
 // One saved destino with live weather + route snapshot.
-function PlanCard({ item, onRemove }: { item: PlanItem; onRemove: () => void }) {
+function PlanCard({
+  item,
+  onRemove,
+}: {
+  item: PlanItem;
+  onRemove: () => void;
+}) {
   const destino = getDestino(item.slug);
   const { data: ruta } = useSWR<RouteResult>(
     destino
@@ -24,8 +30,16 @@ function PlanCard({ item, onRemove }: { item: PlanItem; onRemove: () => void }) 
     fetcher,
   );
   const { data: clima } = useSWR<{
-    current?: { temperature_2m: number; precipitation: number; weather_code: number; wind_speed_10m: number };
-  }>(destino ? `/api/weather?lat=${destino.lat}&lon=${destino.lon}` : null, fetcher);
+    current?: {
+      temperature_2m: number;
+      precipitation: number;
+      weather_code: number;
+      wind_speed_10m: number;
+    };
+  }>(
+    destino ? `/api/weather?lat=${destino.lat}&lon=${destino.lon}` : null,
+    fetcher,
+  );
 
   if (!destino) return null;
   const c = clima?.current;
@@ -63,8 +77,13 @@ function PlanCard({ item, onRemove }: { item: PlanItem; onRemove: () => void }) 
           <p className="font-bold text-bosque-deep">Snapshot de clima</p>
           {c ? (
             <p className="text-ink/70">
-              {Math.round(c.temperature_2m)} °C · {weatherCodeLabel(c.weather_code)} ·{" "}
-              {consejoClima(c.temperature_2m, c.precipitation, c.wind_speed_10m)}
+              {Math.round(c.temperature_2m)} °C ·{" "}
+              {weatherCodeLabel(c.weather_code)} ·{" "}
+              {consejoClima(
+                c.temperature_2m,
+                c.precipitation,
+                c.wind_speed_10m,
+              )}
             </p>
           ) : (
             <p className="text-ink/60">Cargando clima…</p>
@@ -111,7 +130,9 @@ export default function PlanView() {
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-start gap-4 py-8">
-        <h1 className="font-headline text-3xl font-extrabold">Tu itinerario está vacío</h1>
+        <h1 className="font-headline text-3xl font-extrabold">
+          Tu itinerario está vacío
+        </h1>
         <p className="text-ink/70">
           Elige un destino y guárdalo para ver aquí tu resumen con clima y ruta.
         </p>
@@ -127,19 +148,23 @@ export default function PlanView() {
 
   const shareMsg = [
     "Mi itinerario Mi Ruta:",
-    ...items.map((i) => {
-      const d = getDestino(i.slug);
-      return d
-        ? `· ${d.nombre} (${d.municipio}) — ${i.fecha || "fecha por definir"} — ${TRANSPORTE_LABELS[i.transporte] ?? i.transporte} — desde ${formatCOP(d.precio_desde)}`
-        : null;
-    }).filter(Boolean),
+    ...items
+      .map((i) => {
+        const d = getDestino(i.slug);
+        return d
+          ? `· ${d.nombre} (${d.municipio}) — ${i.fecha || "fecha por definir"} — ${TRANSPORTE_LABELS[i.transporte] ?? i.transporte} — desde ${formatCOP(d.precio_desde)}`
+          : null;
+      })
+      .filter(Boolean),
   ].join("\n");
 
   return (
     <div className="flex flex-col gap-6 py-8">
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="font-headline text-3xl font-extrabold">Mi itinerario</h1>
+          <h1 className="font-headline text-3xl font-extrabold">
+            Mi itinerario
+          </h1>
           <p className="text-ink/70">
             {items.length} destino{items.length > 1 ? "s" : ""} guardado
             {items.length > 1 ? "s" : ""} en este dispositivo.

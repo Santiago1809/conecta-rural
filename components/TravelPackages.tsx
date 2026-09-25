@@ -32,14 +32,24 @@ export default function TravelPackages() {
           Si no quieres empezar de cero, Mi Ruta ya te propone un camino.
         </h2>
         <p className="mt-2 text-ink/70">
-          Creamos estos planes con base en lo que más eligen los viajeros. Puedes tomar el más elegido y modificarlo a tu gusto.
+          Creamos estos planes con base en lo que más eligen los viajeros.
+          Puedes tomar el más elegido y modificarlo a tu gusto.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
         {PAQUETES.map((paquete, index) => (
-          <article key={paquete.slug} className="overflow-hidden rounded-2xl bg-card shadow-warm">
+          <article
+            key={paquete.slug}
+            className="overflow-hidden rounded-2xl bg-card shadow-warm"
+          >
             <div className="relative aspect-[4/3]">
-              <Image src={paquete.imagen} alt={`Personas disfrutando ${paquete.nombre}`} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" />
+              <Image
+                src={paquete.imagen}
+                alt={`Personas disfrutando ${paquete.nombre}`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-cover"
+              />
               {index === 0 && (
                 <span className="absolute left-4 top-4 rounded-full bg-terracota px-3 py-1 text-xs font-bold text-white">
                   El más elegido
@@ -48,11 +58,17 @@ export default function TravelPackages() {
             </div>
             <div className="flex flex-col gap-3 p-5">
               <div className="flex items-center justify-between gap-3">
-                <h3 className="font-headline text-xl font-bold">{paquete.nombre}</h3>
-                <span className="text-xs font-semibold text-bosque">{paquete.elegidoPorcentaje}% lo elige</span>
+                <h3 className="font-headline text-xl font-bold">
+                  {paquete.nombre}
+                </h3>
+                <span className="text-xs font-semibold text-bosque">
+                  {paquete.elegidoPorcentaje}% lo elige
+                </span>
               </div>
               <p className="text-sm text-ink/70">{paquete.resumen}</p>
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink/50">{paquete.duracion} · desde {formatCOP(paquete.precio_desde)}</p>
+              <p className="text-xs font-semibold uppercase tracking-wide text-ink/50">
+                {paquete.duracion} · desde {formatCOP(paquete.precio_desde)}
+              </p>
               <button
                 type="button"
                 onClick={() => customize(paquete.destinoSlugs)}

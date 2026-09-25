@@ -12,12 +12,15 @@ export default function SearchBar() {
   const [fecha, setFecha] = useState("");
 
   const suggestions = DESTINOS.filter((d) =>
-    `${d.nombre} ${d.municipio} ${d.vereda}`.toLowerCase().includes(query.toLowerCase()),
+    `${d.nombre} ${d.municipio} ${d.vereda}`
+      .toLowerCase()
+      .includes(query.toLowerCase()),
   ).slice(0, 6);
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const selected = DESTINOS.find((d) => d.slug === slug) ?? suggestions[0] ?? DESTINOS[0];
+    const selected =
+      DESTINOS.find((d) => d.slug === slug) ?? suggestions[0] ?? DESTINOS[0];
     if (!selected) return;
     const qs = fecha ? `?fecha=${encodeURIComponent(fecha)}` : "";
     router.push(`/destinos/${selected.slug}${qs}`);
