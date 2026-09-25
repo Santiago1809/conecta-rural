@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 import Timeline from "@/components/Timeline";
@@ -10,7 +11,15 @@ import { MEDELLIN_ORIGIN } from "@/lib/env";
 import { TRANSPORTE_LABELS, formatCOP, getDestino } from "@/lib/data";
 import { consejoClima, weatherCodeLabel } from "@/lib/meteo";
 import { formatDuration, type RouteResult } from "@/lib/osrm";
-import { loadPlan, removePlanItem, type PlanItem } from "@/lib/plan";
+import {
+  isCustomPlanItem,
+  loadPlan,
+  removeCustomPlanItem,
+  removePlanItem,
+  type CustomPlanItem,
+  type DestinationPlanItem,
+  type PlanItem,
+} from "@/lib/plan";
 
 const fetcher = (url: string) => fetch(url).then((r) => r.json());
 
@@ -19,7 +28,7 @@ function PlanCard({
   item,
   onRemove,
 }: {
-  item: PlanItem;
+  item: DestinationPlanItem;
   onRemove: () => void;
 }) {
   const destino = getDestino(item.slug);
@@ -115,12 +124,56 @@ function PlanCard({
   );
 }
 
+function CustomPlanCard({
+  item,
+  onRemove,
+}: {
+  item: CustomPlanItem;
+  onRemove: () => void;
+}) {
+  return (
+    <article className="flex flex-col gap-4 rounded-2xl bg-card p-6 shadow-warm sm:flex-row">
+      {item.image && (
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl sm:w-52 sm:shrink-0">
+          <Image
+            src={item.image}
+            alt={item.name}
+            fill
+            sizes="(max-width: 640px) 100vw, 208px"
+            className="object-cover"
+          />
+        </div>
+      )}
+      <div className="flex flex-1 flex-col gap-2">
+        <p className="text-xs font-semibold uppercase tracking-wide text-terracota">
+          {item.kind === "experience" ? "Experiencia" : "Alojamiento"} · {item.destination}
+        </p>
+        <h2 className="font-headline text-2xl font-bold">{item.name}</h2>
+        <p className="text-sm text-ink/70">{item.description}</p>
+        <p className="text-sm font-semibold text-bosque">
+          {formatCOP(item.price)}{item.kind === "lodging" ? " / noche" : ""}
+        </p>
+        <div className="no-print mt-2">
+          <button
+            type="button"
+            onClick={onRemove}
+            className="rounded-[10px] border border-inputborder bg-white px-4 py-2.5 text-sm font-semibold text-ink transition hover:border-terracota hover:text-terracota"
+          >
+            Quitar del plan
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 // Mi itinerario: localStorage summary with share-via-WhatsApp and print.
 export default function PlanView() {
   const [items, setItems] = useState<PlanItem[] | null>(null);
 
   useEffect(() => {
-    setItems(loadPlan());
+    const frameId = window.requestAnimationFrame(() => setItems(loadPlan()));
+    return () => window.cancelAnimationFrame(frameId);
   }, []);
 
   if (items === null) {
@@ -150,6 +203,9 @@ export default function PlanView() {
     "Mi itinerario Mi Ruta:",
     ...items
       .map((i) => {
+        if (isCustomPlanItem(i)) {
+          return `· ${i.name} (${i.destination}) — ${formatCOP(i.price)}${i.kind === "lodging" ? " / noche" : ""}`;
+        }
         const d = getDestino(i.slug);
         return d
           ? `· ${d.nombre} (${d.municipio}) — ${i.fecha || "fecha por definir"} — ${TRANSPORTE_LABELS[i.transporte] ?? i.transporte} — desde ${formatCOP(d.precio_desde)}`
@@ -166,7 +222,7 @@ export default function PlanView() {
             Mi itinerario
           </h1>
           <p className="text-ink/70">
-            {items.length} destino{items.length > 1 ? "s" : ""} guardado
+            {items.length} elemento{items.length > 1 ? "s" : ""} guardado
             {items.length > 1 ? "s" : ""} en este dispositivo.
           </p>
         </div>
@@ -182,11 +238,19 @@ export default function PlanView() {
         </div>
       </header>
       {items.map((item) => (
-        <PlanCard
-          key={item.slug}
-          item={item}
-          onRemove={() => setItems(removePlanItem(item.slug))}
-        />
+        isCustomPlanItem(item) ? (
+          <CustomPlanCard
+            key={item.id}
+            item={item}
+            onRemove={() => setItems(removeCustomPlanItem(item.id))}
+          />
+        ) : (
+          <PlanCard
+            key={item.slug}
+            item={item}
+            onRemove={() => setItems(removePlanItem(item.slug))}
+          />
+        )
       ))}
     </div>
   );

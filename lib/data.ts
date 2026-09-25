@@ -130,6 +130,31 @@ export function getDestino(slug: string): Destino | undefined {
   return DESTINOS.find((d) => d.slug === slug);
 }
 
+export function slugify(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+export function experienciaSlug(experiencia: Experiencia): string {
+  return `${experiencia.destino_slug}-${slugify(experiencia.nombre)}`;
+}
+
+export function alojamientoSlug(alojamiento: Alojamiento): string {
+  return `${alojamiento.destino_slug}-${slugify(alojamiento.nombre)}`;
+}
+
+export function getExperiencia(slug: string): Experiencia | undefined {
+  return EXPERIENCIAS.find((experiencia) => experienciaSlug(experiencia) === slug);
+}
+
+export function getAlojamiento(slug: string): Alojamiento | undefined {
+  return ALOJAMIENTOS.find((alojamiento) => alojamientoSlug(alojamiento) === slug);
+}
+
 /** "85000" -> "$85.000 COP" */
 export function formatCOP(value: number): string {
   return `$${value.toLocaleString("es-CO")} COP`;

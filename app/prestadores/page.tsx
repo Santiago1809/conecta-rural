@@ -3,6 +3,7 @@ import VerifiedBadge from "@/components/VerifiedBadge";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { PRESTADORES, formatCOP, getDestino } from "@/lib/data";
 import RntBadge from "./RntBadge";
+import CommentsSection from "@/components/CommentsSection";
 
 // Mi Ruta: provider cards with direct wa.me chat + tel: fallback + RNT badge.
 export default function PrestadoresPage() {
@@ -55,6 +56,7 @@ export default function PrestadoresPage() {
                     Llamar {p.telefono}
                   </a>
                 </div>
+                <CommentsSection resourceType="provider" resourceId={p.nombre} />
               </div>
             </article>
           );

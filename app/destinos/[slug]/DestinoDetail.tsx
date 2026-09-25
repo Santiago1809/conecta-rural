@@ -8,11 +8,13 @@ import Timeline from "@/components/Timeline";
 import TransportSelector from "@/components/TransportSelector";
 import VerifiedBadge from "@/components/VerifiedBadge";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import CommentsSection from "@/components/CommentsSection";
 import { MEDELLIN_ORIGIN } from "@/lib/env";
 import { formatCOP, PRESTADORES, TRANSPORTE_LABELS, type Destino } from "@/lib/data";
 import { consejoClima, weatherCodeLabel } from "@/lib/meteo";
 import { formatDuration, type RouteResult } from "@/lib/osrm";
 import { upsertPlanItem } from "@/lib/plan";
+import { showToast } from "@/lib/toast";
 
 const DestinationMap = dynamic(
   () => import("@/components/DestinationMap"),
@@ -76,6 +78,7 @@ export default function DestinoDetail({ destino, fechaInicial, placeLabel }: Pro
   function guardar() {
     upsertPlanItem({ slug: destino.slug, fecha, transporte });
     setGuardado(true);
+    showToast(`${destino.nombre} se añadió a tu itinerario.`);
   }
 
   const waMsg = `Hola, quiero reservar en ${destino.nombre} (${destino.municipio}) para el ${fecha || "próximo fin de semana"}. Llego en ${TRANSPORTE_LABELS[transporte] ?? transporte}.`;
@@ -197,6 +200,8 @@ export default function DestinoDetail({ destino, fechaInicial, placeLabel }: Pro
           )}
         </div>
       </section>
+
+      <CommentsSection resourceType="destination" resourceId={destino.slug} />
     </div>
   );
 }

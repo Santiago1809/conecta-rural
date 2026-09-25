@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ToastViewport from "@/components/ToastViewport";
 
 const headline = Plus_Jakarta_Sans({
   variable: "--font-headline",
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <ToastViewport />
       </body>
     </html>
   );

@@ -1,3 +1,20 @@
+# Mi Ruta
+
+## Auth, comentarios y PUNTOS MI RUTA
+
+El sistema de comentarios y recompensas usa Auth.js con sesiones JWT y Turso/libSQL.
+
+Configura estas variables en `.env.local` usando `.env.example` como referencia:
+
+```env
+TURSO_DATABASE_URL=libsql://your-database.turso.io
+TURSO_AUTH_TOKEN=your-turso-auth-token
+AUTH_SECRET=replace-with-a-long-random-secret
+```
+
+Las tablas se crean automáticamente en la primera operación de registro, comentario o recompensas. También está disponible el esquema completo en `db/schema.sql`.
+
+Cada comentario publicado suma 25 PUNTOS MI RUTA. El saldo se guarda en un ledger y los descuentos de alojamiento se pueden canjear una sola vez por usuario; el catálogo inicial está limitado a tres alojamientos.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

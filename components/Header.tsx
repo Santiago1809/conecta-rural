@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import HeaderAccount from "@/components/HeaderAccount";
 
 export default function Header() {
   const links = [
@@ -9,6 +10,7 @@ export default function Header() {
     { href: "/oferta", label: "Explora" },
     { href: "/prestadores", label: "Prestadores" },
     { href: "/plan", label: "Mi itinerario" },
+    { href: "/puntos", label: "Puntos" },
   ];
 
   return (
@@ -53,6 +55,7 @@ export default function Header() {
           >
             Reservar
           </Link>
+          <HeaderAccount />
         </nav>
       </div>
     </header>

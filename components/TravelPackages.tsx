@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { PAQUETES, DESTINOS, formatCOP } from "@/lib/data";
 import { upsertPlanItem } from "@/lib/plan";
+import CommentsSection from "@/components/CommentsSection";
+import { showToast } from "@/lib/toast";
 
 export default function TravelPackages() {
   const router = useRouter();
@@ -76,6 +78,7 @@ export default function TravelPackages() {
               >
                 Modificar a mi gusto
               </button>
+              <CommentsSection resourceType="package" resourceId={paquete.slug} />
             </div>
           </article>
         ))}
@@ -83,3 +86,4 @@ export default function TravelPackages() {
     </section>
   );
 }
+  showToast("El paquete se añadió a tu itinerario.");
