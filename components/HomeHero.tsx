@@ -44,17 +44,33 @@ export default function HomeHero({ children }: { children: React.ReactNode }) {
   const goTo = useCallback((i: number) => {
     setIndex(((i % DESTINOS.length) + DESTINOS.length) % DESTINOS.length);
   }, []);
-  const prev = useCallback(() => goTo(index - 1), [index, goTo]);
-  const next = useCallback(() => goTo(index + 1), [index, goTo]);
 
   const destino = DESTINOS[index];
 
+  // Hover only counts for a real mouse. Touch browsers synthesise a mouseenter
+  // on tap and do not always follow it with a mouseleave, so an ungated
+  // onMouseEnter latches `hovered` on a phone and the autoplay never resumes.
+  const onPointerEnter = (e: React.PointerEvent<HTMLElement>) => {
+    if (e.pointerType === "mouse") setHovered(true);
+  };
+  const onPointerLeave = (e: React.PointerEvent<HTMLElement>) => {
+    if (e.pointerType === "mouse") setHovered(false);
+  };
+  // Keyboard focus only, for the same reason: a tap focuses whatever is under
+  // the finger, and pausing on that would freeze the carousel with no way back.
+  // Clearing on blur is unconditional because :focus-visible stops matching the
+  // moment focus is gone.
+  const onFocusCapture = (e: React.FocusEvent<HTMLElement>) => {
+    if ((e.target as HTMLElement).matches(":focus-visible")) setFocused(true);
+  };
+  const onBlurCapture = () => setFocused(false);
+
   return (
     <section
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      onFocusCapture={() => setFocused(true)}
-      onBlurCapture={() => setFocused(false)}
+      onPointerEnter={onPointerEnter}
+      onPointerLeave={onPointerLeave}
+      onFocusCapture={onFocusCapture}
+      onBlurCapture={onBlurCapture}
       aria-roledescription="carrusel"
       aria-label="Destinos rurales de Antioquia"
     >
@@ -86,7 +102,9 @@ export default function HomeHero({ children }: { children: React.ReactNode }) {
         {/* Scrim: bottom-weighted so white text clears AA over any photo. */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/15" />
 
-        {/* Dots live top-right, clear of the content band and the arrows. */}
+        {/* Dots are the only manual control now that the arrows are gone, so they
+            carry the whole navigation role. Top-right keeps them clear of the
+            content band. */}
         <div className="absolute right-4 top-24 flex gap-2 sm:right-6">
           {DESTINOS.map((d, i) => (
             <button
@@ -99,37 +117,6 @@ export default function HomeHero({ children }: { children: React.ReactNode }) {
             />
           ))}
         </div>
-
-        <button
-          onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white backdrop-blur transition-colors hover:bg-black/60 active:translate-y-[calc(-50%+1px)] sm:left-6"
-          aria-label="Anterior"
-        >
-          <svg
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/40 p-2 text-white backdrop-blur transition-colors hover:bg-black/60 active:translate-y-[calc(-50%+1px)] sm:right-6"
-          aria-label="Siguiente"
-        >
-          <svg
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
 
         {/* Content band, bottom-anchored. `relative` lifts it over the scrim. */}
         <div className="absolute inset-x-0 bottom-0">
