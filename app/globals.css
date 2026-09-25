@@ -58,6 +58,48 @@ body {
   background: rgb(31 36 33 / 0.15);
 }
 
+.hub-poi-icon {
+  background: transparent;
+  border: 0;
+}
+
+.hub-poi {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 999px;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 3px 10px rgb(31 45 36 / 0.28);
+}
+
+.hub-poi-aventura {
+  background: var(--color-bosque);
+}
+
+.hub-poi-naturaleza {
+  background: #4e8c62;
+}
+
+.hub-poi-bienestar {
+  background: #8c6b3f;
+}
+
+.hub-poi-cultura {
+  background: #6a568f;
+}
+
+.hub-poi-alojamiento {
+  background: #39718f;
+}
+
+.hub-poi-restaurante {
+  background: var(--color-terracota);
+}
+
 @media print {  header,
   footer,
   .no-print {

@@ -8,12 +8,19 @@ import { DESTINOS } from "@/lib/data";
 export default function SearchBar() {
   const router = useRouter();
   const [slug, setSlug] = useState(DESTINOS[0]?.slug ?? "");
+  const [query, setQuery] = useState(DESTINOS[0]?.nombre ?? "");
   const [fecha, setFecha] = useState("");
+
+  const suggestions = DESTINOS.filter((d) =>
+    `${d.nombre} ${d.municipio} ${d.vereda}`.toLowerCase().includes(query.toLowerCase()),
+  ).slice(0, 6);
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const selected = DESTINOS.find((d) => d.slug === slug) ?? suggestions[0] ?? DESTINOS[0];
+    if (!selected) return;
     const qs = fecha ? `?fecha=${encodeURIComponent(fecha)}` : "";
-    router.push(`/destinos/${slug}${qs}`);
+    router.push(`/destinos/${selected.slug}${qs}`);
   }
 
   const inputCls =
@@ -26,13 +33,38 @@ export default function SearchBar() {
     >
       <label className="flex-1">
         <span className="sr-only">Destino</span>
-        <select value={slug} onChange={(e) => setSlug(e.target.value)} className={inputCls}>
-          {DESTINOS.map((d) => (
-            <option key={d.slug} value={d.slug}>
-              {d.nombre} · {d.municipio}
-            </option>
-          ))}
-        </select>
+        <div className="relative">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setSlug("");
+            }}
+            placeholder="Busca un destino o municipio"
+            className={inputCls}
+            aria-label="Buscar destino o municipio"
+            autoComplete="off"
+          />
+          {query && suggestions.length > 0 && (
+            <div className="absolute left-0 right-0 top-full z-20 mt-1 overflow-hidden rounded-xl border border-inputborder bg-white shadow-warm">
+              {suggestions.map((d) => (
+                <button
+                  key={d.slug}
+                  type="button"
+                  className="block w-full px-4 py-3 text-left text-sm hover:bg-soft"
+                  onClick={() => {
+                    setSlug(d.slug);
+                    setQuery(`${d.nombre} · ${d.municipio}`);
+                  }}
+                >
+                  <span className="font-semibold text-ink">{d.nombre}</span>
+                  <span className="ml-2 text-ink/60">{d.municipio}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </label>
       <label className="flex-1">
         <span className="sr-only">Fecha del viaje</span>

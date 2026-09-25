@@ -4,6 +4,7 @@ import SearchBar from "@/components/SearchBar";
 import VerifiedBadge from "@/components/VerifiedBadge";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import MunicipalityCarousel from "@/components/MunicipalityCarousel";
+import TravelPackages from "@/components/TravelPackages";
 import { DESTINOS, PRESTADORES, formatCOP } from "@/lib/data";
 
 // Bienvenida: hero, search, featured cards, community insights.
@@ -51,6 +52,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <TravelPackages />
 
       {/* Prestador destacado */}
       {prestadorDestacado && (

@@ -96,7 +96,7 @@ function PlanCard({ item, onRemove }: { item: PlanItem; onRemove: () => void }) 
   );
 }
 
-// Tu plan: localStorage summary with share-via-WhatsApp and print.
+// Mi itinerario: localStorage summary with share-via-WhatsApp and print.
 export default function PlanView() {
   const [items, setItems] = useState<PlanItem[] | null>(null);
 
@@ -111,7 +111,7 @@ export default function PlanView() {
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-start gap-4 py-8">
-        <h1 className="font-headline text-3xl font-extrabold">Tu plan está vacío</h1>
+        <h1 className="font-headline text-3xl font-extrabold">Tu itinerario está vacío</h1>
         <p className="text-ink/70">
           Elige un destino y guárdalo para ver aquí tu resumen con clima y ruta.
         </p>
@@ -126,7 +126,7 @@ export default function PlanView() {
   }
 
   const shareMsg = [
-    "Mi plan Mi Ruta:",
+    "Mi itinerario Mi Ruta:",
     ...items.map((i) => {
       const d = getDestino(i.slug);
       return d
@@ -139,7 +139,7 @@ export default function PlanView() {
     <div className="flex flex-col gap-6 py-8">
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="font-headline text-3xl font-extrabold">Tu plan</h1>
+          <h1 className="font-headline text-3xl font-extrabold">Mi itinerario</h1>
           <p className="text-ink/70">
             {items.length} destino{items.length > 1 ? "s" : ""} guardado
             {items.length > 1 ? "s" : ""} en este dispositivo.

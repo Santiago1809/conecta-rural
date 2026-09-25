@@ -52,5 +52,41 @@
     "precio": 0,
     "foto": "https://images.pexels.com/photos/14413312/pexels-photo-14413312.jpeg",
     "foto_credit": "Pexels"
+  },
+  {
+    "nombre": "Tubing entre cascadas",
+    "categoria": "aventura",
+    "destino_slug": "san-carlos",
+    "descripcion": "Flota por aguas tranquilas y comparte una jornada de río con guías locales y paisajes verdes.",
+    "precio": 45000,
+    "foto": "https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg",
+    "foto_credit": "Pexels"
+  },
+  {
+    "nombre": "Taller de cocina campesina",
+    "categoria": "cultura",
+    "destino_slug": "san-antonio-de-pereira",
+    "descripcion": "Cocina recetas antioqueñas junto a una familia local y comparte la mesa con ingredientes de la huerta.",
+    "precio": 35000,
+    "foto": "https://images.pexels.com/photos/4253312/pexels-photo-4253312.jpeg",
+    "foto_credit": "Pexels"
+  },
+  {
+    "nombre": "Avistamiento de aves al amanecer",
+    "categoria": "naturaleza",
+    "destino_slug": "guatape",
+    "descripcion": "Recorre senderos de bosque con un anfitrión local y aprende a reconocer aves de la montaña.",
+    "precio": 30000,
+    "foto": "https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg",
+    "foto_credit": "Pexels"
+  },
+  {
+    "nombre": "Caminata con campesinos",
+    "categoria": "bienestar",
+    "destino_slug": "sopetran",
+    "descripcion": "Camina por caminos rurales, conoce cultivos de la zona y termina con una merienda preparada en comunidad.",
+    "precio": 28000,
+    "foto": "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg",
+    "foto_credit": "Pexels"
   }
 ]
