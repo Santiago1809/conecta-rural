@@ -14,7 +14,7 @@ AUTH_SECRET=replace-with-a-long-random-secret
 
 Las tablas se crean automáticamente en la primera operación de registro, comentario o recompensas. También está disponible el esquema completo en `db/schema.sql`.
 
-Cada comentario publicado suma 25 PUNTOS MI RUTA. El saldo se guarda en un ledger y los descuentos de alojamiento se pueden canjear una sola vez por usuario; el catálogo inicial está limitado a tres alojamientos.
+Cada comentario publicado suma 25 PUNTOS MI RUTA, y cada "me gusta" que recibe ese comentario suma 15 más a quien lo escribió (quitar el me gusta los descuenta). El saldo se guarda en un ledger y los descuentos de alojamiento se pueden canjear una sola vez por usuario; el catálogo inicial está limitado a tres alojamientos y sus costos se rebalancearon dos veces, un 50 % cada vez (100 → 150 y luego 150 → 300; 75 → 113 y luego 113 → 226), mediante una migración idempotente que también corrige bases ya sembradas.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

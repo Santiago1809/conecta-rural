@@ -14,8 +14,9 @@ function getResource(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const resource = getResource(request);
   if (!resource) return NextResponse.json({ error: "Recurso inválido." }, { status: 400 });
+  const session = await auth();
   try {
-    return NextResponse.json({ comments: await listComments(resource.type, resource.id) });
+    return NextResponse.json({ comments: await listComments(resource.type, resource.id, session?.user?.id) });
   } catch {
     return NextResponse.json({ error: "La base de datos no está configurada." }, { status: 503 });
   }

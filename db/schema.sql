@@ -41,5 +41,14 @@ CREATE TABLE IF NOT EXISTS redemptions (
   UNIQUE(user_id, discount_id)
 );
 
+CREATE TABLE IF NOT EXISTS comment_likes (
+  id TEXT PRIMARY KEY,
+  comment_id TEXT NOT NULL REFERENCES comments(id) ON DELETE CASCADE,
+  user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(comment_id, user_id)
+);
+
 CREATE INDEX IF NOT EXISTS comments_resource_idx ON comments(resource_type, resource_id, created_at DESC);
 CREATE INDEX IF NOT EXISTS point_transactions_user_idx ON point_transactions(user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS comment_likes_comment_idx ON comment_likes(comment_id);
