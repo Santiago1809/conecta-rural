@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   },
   description:
     "Descubre destinos rurales de Antioquia con rutas reales, clima en vivo y contacto directo con quienes te reciben.",
+  // One source for the icon. The file-based app/favicon.ico and app/icon.svg
+  // were removed: Next injects those automatically and a file convention wins
+  // over metadata.icons, so leaving them would silently keep the old mark.
+  icons: {
+    icon: [{ url: "/logo.jpeg", type: "image/jpeg" }],
+    shortcut: ["/logo.jpeg"],
+    apple: [{ url: "/logo.jpeg", type: "image/jpeg" }],
+  },
   openGraph: {
     type: "website",
     locale: "es_CO",
