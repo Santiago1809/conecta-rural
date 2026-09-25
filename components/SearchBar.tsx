@@ -10,6 +10,9 @@ export default function SearchBar() {
   const [slug, setSlug] = useState(DESTINOS[0]?.slug ?? "");
   const [query, setQuery] = useState(DESTINOS[0]?.nombre ?? "");
   const [fecha, setFecha] = useState("");
+  // The field ships with a default destination, so without this the suggestion
+  // list renders on page load and, on a phone, covers the date field.
+  const [touched, setTouched] = useState(false);
 
   const suggestions = DESTINOS.filter((d) =>
     `${d.nombre} ${d.municipio} ${d.vereda}`
@@ -43,14 +46,18 @@ export default function SearchBar() {
             onChange={(e) => {
               setQuery(e.target.value);
               setSlug("");
+              setTouched(true);
             }}
+            onFocus={() => setTouched(true)}
             placeholder="Busca un destino o municipio"
             className={inputCls}
             aria-label="Buscar destino o municipio"
             autoComplete="off"
           />
-          {query && suggestions.length > 0 && (
-            <div className="absolute left-0 right-0 top-full z-20 mt-1 overflow-hidden rounded-xl border border-inputborder bg-white shadow-warm">
+          {touched && query && suggestions.length > 0 && (
+            // Opens upward: the hero clips its own overflow, and the field sits
+            // in a bottom-anchored band, so a dropdown below would be cut off.
+            <div className="absolute bottom-full left-0 right-0 z-20 mb-1 overflow-hidden rounded-xl border border-inputborder bg-white shadow-warm">
               {suggestions.map((d) => (
                 <button
                   key={d.slug}
@@ -80,7 +87,7 @@ export default function SearchBar() {
       </label>
       <button
         type="submit"
-        className="rounded-[10px] bg-terracota px-6 py-2.5 text-sm font-semibold text-white shadow-warm transition-colors hover:bg-terracota-hover"
+        className="rounded-[10px] bg-terracota-hover px-6 py-2.5 text-sm font-semibold text-white shadow-warm transition-colors hover:bg-terracota-deep active:translate-y-[1px]"
       >
         Buscar
       </button>

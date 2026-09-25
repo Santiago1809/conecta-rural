@@ -11,7 +11,17 @@ const AUTH_REQUIRED_MESSAGE = "Inicia sesión para comentar.";
 // so the action is "Ver mis puntos", not a sign-in prompt.
 const PUBLISHED_PREFIX = "Comentario publicado.";
 
-export default function CommentsSection({ resourceType, resourceId }: { resourceType: ResourceType; resourceId: string }) {
+export default function CommentsSection({
+  resourceType,
+  resourceId,
+  variant = "card",
+}: {
+  resourceType: ResourceType;
+  resourceId: string;
+  // "card" is the standalone default. "embedded" drops the section chrome and
+  // the heading so it can sit inside a card that already owns an h3.
+  variant?: "card" | "embedded";
+}) {
   const [comments, setComments] = useState<PublicComment[]>([]);
   const [body, setBody] = useState("");
   const [message, setMessage] = useState("");
@@ -71,12 +81,23 @@ export default function CommentsSection({ resourceType, resourceId }: { resource
   const showSignInLink = sessionLoaded && !sessionUser && message === AUTH_REQUIRED_MESSAGE;
   const showPointsLink = message.startsWith(PUBLISHED_PREFIX);
 
+  const embedded = variant === "embedded";
+  const Root = embedded ? "div" : "section";
+
   return (
-    <section className="flex flex-col gap-4 rounded-2xl bg-card p-6 shadow-warm">
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-terracota">Experiencias reales</p>
-        <h2 className="mt-1 font-headline text-2xl font-bold">Comentarios</h2>
-      </div>
+    <Root
+      className={
+        embedded
+          ? "mt-1 border-t border-inputborder/60 pt-4 flex flex-col gap-4"
+          : "flex flex-col gap-4 rounded-2xl bg-card p-6 shadow-warm"
+      }
+    >
+      {!embedded && (
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-terracota-hover">Experiencias reales</p>
+          <h2 className="mt-1 font-headline text-2xl font-bold">Comentarios</h2>
+        </div>
+      )}
       {loading ? (
         <p className="text-sm text-ink/60">Cargando comentarios…</p>
       ) : comments.length ? (
@@ -91,7 +112,7 @@ export default function CommentsSection({ resourceType, resourceId }: { resource
                 disabled={!sessionUser || comment.isAuthor}
                 aria-pressed={comment.likedByMe}
                 title={comment.isAuthor ? "Es tu propio comentario." : !sessionUser ? "Inicia sesión para dar me gusta." : undefined}
-                className={`mt-2 rounded-[10px] border px-3 py-1.5 text-xs font-semibold disabled:cursor-not-allowed disabled:opacity-50 ${comment.likedByMe ? "border-terracota text-terracota" : "border-inputborder text-ink/70"}`}
+                className={`mt-2 rounded-[10px] border px-3 py-1.5 text-xs font-semibold disabled:cursor-not-allowed disabled:opacity-50 ${comment.likedByMe ? "border-terracota-hover text-terracota-hover" : "border-inputborder text-ink/70"}`}
               >
                 {comment.likedByMe ? "Quitar me gusta" : "Me gusta"} · {comment.likes}
               </button>
@@ -112,10 +133,10 @@ export default function CommentsSection({ resourceType, resourceId }: { resource
       {message && (
         <p role="status" className="text-sm text-ink/70">
           {message}
-          {showSignInLink && <>{" "}<Link href="/auth/sign-in" className="font-semibold text-terracota">Iniciar sesión</Link></>}
-          {showPointsLink && <>{" "}<Link href="/puntos" className="font-semibold text-terracota">Ver mis puntos</Link></>}
+          {showSignInLink && <>{" "}<Link href="/auth/sign-in" className="font-semibold text-terracota-hover">Iniciar sesión</Link></>}
+          {showPointsLink && <>{" "}<Link href="/puntos" className="font-semibold text-terracota-hover">Ver mis puntos</Link></>}
         </p>
       )}
-    </section>
+    </Root>
   );
 }

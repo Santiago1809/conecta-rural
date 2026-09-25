@@ -2,15 +2,26 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { PAQUETES, DESTINOS, formatCOP } from "@/lib/data";
 import { upsertPlanItem } from "@/lib/plan";
 import CommentsSection from "@/components/CommentsSection";
 import { showToast } from "@/lib/toast";
 
+// Derived from the data, not from the array index, so reordering data/paquetes
+// cannot hand the "El más elegido" label to the wrong package.
+const MAS_ELEGIDO = Math.max(...PAQUETES.map((paquete) => paquete.elegidoPorcentaje));
+
 export default function TravelPackages() {
   const router = useRouter();
+  // One section-level state, so only one thread is ever open and only one
+  // CommentsSection is mounted (and fetching) at a time.
+  const [openSlug, setOpenSlug] = useState<string | null>(null);
+  const [pending, setPending] = useState(false);
 
   function customize(slugs: string[]) {
+    if (pending) return;
+    setPending(true);
     slugs.forEach((slug) => {
       const destino = DESTINOS.find((item) => item.slug === slug);
       if (destino) {
@@ -21,16 +32,17 @@ export default function TravelPackages() {
         });
       }
     });
+    showToast("El paquete se añadió a tu itinerario.");
     router.push("/plan");
   }
 
   return (
     <section className="flex flex-col gap-5">
       <div className="max-w-2xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-terracota">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-terracota-hover">
           Viajes ya armados
         </p>
-        <h2 className="mt-2 font-headline text-2xl font-bold sm:text-3xl">
+        <h2 className="reveal-up mt-2 font-headline text-2xl font-bold sm:text-3xl">
           Si no quieres empezar de cero, Mi Ruta ya te propone un camino.
         </h2>
         <p className="mt-2 text-ink/70">
@@ -39,51 +51,75 @@ export default function TravelPackages() {
         </p>
       </div>
       <div className="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-3">
-        {PAQUETES.map((paquete, index) => (
-          <article
-            key={paquete.slug}
-            className="flex h-full flex-col overflow-hidden rounded-2xl bg-card shadow-warm"
-          >
-            <div className="relative aspect-[4/3] shrink-0">
-              <Image
-                src={paquete.imagen}
-                alt={`Personas disfrutando ${paquete.nombre}`}
-                fill
-                sizes="(max-width: 1024px) 100vw, 33vw"
-                className="object-cover"
-              />
-              {index === 0 && (
-                <span className="absolute left-4 top-4 rounded-full bg-terracota px-3 py-1 text-xs font-bold text-white">
-                  El más elegido
-                </span>
-              )}
-            </div>
-            <div className="flex flex-1 flex-col gap-3 p-5">
-              <div className="flex min-h-12 items-start justify-between gap-3">
+        {PAQUETES.map((paquete) => {
+          const esMasElegido = paquete.elegidoPorcentaje === MAS_ELEGIDO;
+          const comentariosId = `comentarios-${paquete.slug}`;
+          const comentariosAbiertos = openSlug === paquete.slug;
+          return (
+            <article
+              key={paquete.slug}
+              className="flex h-full flex-col overflow-hidden rounded-2xl bg-card shadow-warm"
+            >
+              <div className="relative aspect-video shrink-0">
+                <Image
+                  src={paquete.imagen}
+                  alt={`Imagen del paquete ${paquete.nombre}`}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-3 p-5">
+                {esMasElegido && (
+                  <p className="text-xs font-semibold uppercase tracking-wide text-terracota-hover">
+                    El más elegido
+                  </p>
+                )}
                 <h3 className="font-headline text-xl font-bold leading-tight">
                   {paquete.nombre}
                 </h3>
-                <span className="shrink-0 pt-1 text-right text-xs font-semibold text-bosque">
-                  {paquete.elegidoPorcentaje}% lo elige
-                </span>
+                <p className="text-sm text-ink/70">{paquete.resumen}</p>
+                <p className="text-base font-semibold text-bosque">
+                  Desde {formatCOP(paquete.precio_desde)}
+                </p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-ink/70">
+                  {paquete.duracion} · {paquete.elegidoPorcentaje}% lo eligen
+                </p>
+                <button
+                  type="button"
+                  onClick={() => customize(paquete.destinoSlugs)}
+                  disabled={pending}
+                  className="mt-auto w-full rounded-[10px] bg-terracota-hover px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-terracota-deep active:translate-y-[1px] disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  Modificar a mi gusto
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenSlug(comentariosAbiertos ? null : paquete.slug)
+                  }
+                  aria-expanded={comentariosAbiertos}
+                  aria-controls={comentariosId}
+                  className="rounded-[10px] border border-bosque bg-white px-4 py-2.5 text-sm font-semibold text-bosque transition hover:bg-verified active:translate-y-[1px]"
+                >
+                  {comentariosAbiertos
+                    ? "Ocultar comentarios"
+                    : "Ver comentarios"}
+                </button>
+                {comentariosAbiertos && (
+                  <div id={comentariosId}>
+                    <CommentsSection
+                      resourceType="package"
+                      resourceId={paquete.slug}
+                      variant="embedded"
+                    />
+                  </div>
+                )}
               </div>
-              <p className="text-sm text-ink/70">{paquete.resumen}</p>
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink/50">
-                {paquete.duracion} · desde {formatCOP(paquete.precio_desde)}
-              </p>
-              <button
-                type="button"
-                onClick={() => customize(paquete.destinoSlugs)}
-                className="mt-auto w-full rounded-[10px] bg-bosque px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-bosque-hover"
-              >
-                Modificar a mi gusto
-              </button>
-              <CommentsSection resourceType="package" resourceId={paquete.slug} />
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
 }
-  showToast("El paquete se añadió a tu itinerario.");

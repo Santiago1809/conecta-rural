@@ -6,22 +6,37 @@
 }
 
 @theme {
-  /* Tierra Viva palette */
+  /* Tierra Viva palette.
+     Radius rule: panels rounded-3xl, cards rounded-2xl, interactive controls
+     rounded-[10px], pills and badges rounded-full. */
   --color-bosque: #1e4b37;
   --color-bosque-hover: #2b6e4e;
   --color-bosque-deep: #023422;
   --color-terracota: #c85a32;
   --color-terracota-hover: #b24f2c;
+  /* Hover dark for solid terracotta fills: 6.43:1 on white, the only ratio that
+     clears WCAG AA once a fill leaves its resting state. */
+  --color-terracota-deep: #9c4425;
   --color-whatsapp: #25d366;
   --color-ink: #1f2421;
   --color-canvas: #fbf9f5;
   --color-card: #ffffff;
   --color-soft: #f4efe6;
+  /* Sticky header surface. Green tint against the cream canvas; kept as a token
+     so the header is not the one place using a raw hex. */
+  --color-header: #f2f6e2;
   --color-inputborder: #dcd5c9;
   --color-verified: #eaf3ee;
 
   /* Warm card shadow */
   --shadow-warm: 0 10px 30px -14px rgb(31 36 33 / 0.28);
+}
+
+/* `clip`, not `hidden`, and not on `body`: the full-bleed hero is 100vw, which
+   includes the scrollbar gutter, and `overflow: hidden` would turn the root into
+   a scroll container and break the sticky header. `clip` does not. */
+html {
+  overflow-x: clip;
 }
 
 body {
@@ -40,22 +55,6 @@ body {
 .leaflet-top,
 .leaflet-bottom {
   z-index: 10;
-}
-
-/* Carousel */
-.carousel-track {
-  display: flex;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.carousel-slide {
-  min-width: 100%;
-  scroll-snap-align: start;
-}
-.carousel-btn {
-  transition: all 0.2s ease;
-}
-.carousel-btn:hover {
-  background: rgb(31 36 33 / 0.15);
 }
 
 .hub-poi-icon {
@@ -113,6 +112,42 @@ body {
 
 .toast-enter {
   animation: toast-in 180ms ease-out;
+}
+
+/* Section heading reveal: native scroll-driven animation, no JS, no library.
+   The guard keeps the rule inert under prefers-reduced-motion. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .reveal-up {
+    animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 32%;
+  }
+
+  /* Hero municipality name: the active destination changed, so the name needs
+     to be noticed. Opacity and transform only, so nothing reflows. */
+  @keyframes slide-name-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .slide-name-in {
+    animation: slide-name-in 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
 }
 
 @media print {

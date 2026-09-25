@@ -8,7 +8,7 @@ export default function DestinationCard({ destino }: { destino: Destino }) {
   return (
     <Link
       href={`/destinos/${destino.slug}`}
-      className="group overflow-hidden rounded-2xl bg-card shadow-warm transition-transform hover:-translate-y-0.5"
+      className="group overflow-hidden rounded-2xl bg-card shadow-warm transition-transform hover:-translate-y-0.5 active:translate-y-[1px]"
     >
       <div className="relative aspect-video w-full overflow-hidden">
         <Image
@@ -21,7 +21,7 @@ export default function DestinationCard({ destino }: { destino: Destino }) {
       </div>
       <div className="flex flex-col gap-2 p-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="text-xs font-semibold uppercase tracking-wide text-terracota">
+          <p className="text-xs font-semibold uppercase tracking-wide text-terracota-hover">
             {destino.municipio} · {destino.vereda}
           </p>
           {destino.verificado && <VerifiedBadge />}
@@ -30,8 +30,10 @@ export default function DestinationCard({ destino }: { destino: Destino }) {
           {destino.nombre}
         </h3>
         <p className="text-sm text-ink/70">
-          {destino.tiempo_aprox} · {destino.transporte.length} opciones de
-          transporte
+          {destino.tiempo_aprox} · {destino.transporte.length}{" "}
+          {destino.transporte.length === 1
+            ? "opción de transporte"
+            : "opciones de transporte"}
         </p>
         <p className="text-sm font-semibold text-bosque">
           Desde {formatCOP(destino.precio_desde)}
